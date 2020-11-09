@@ -73,6 +73,7 @@ https://templatemo.com/tm-529-ramayana
 				solo ordenador, decimos que la computación paralela es distribuída. Por ejemplo, cada búsqueda en Google se
 				ejecuta simultáneamente en cientos de ordenadores, cada uno de los cuales busca al mismo tiempo en un
 				subconjunto del índice del web.
+			    </p>
 
 
 			    <h2>PARALELISMO NO ES CONCURRENCIA</h2>
@@ -108,11 +109,9 @@ https://templatemo.com/tm-529-ramayana
 			    <h2>DE IMPLEMENTACIÓN SERIE A PARALELA</h2>
 			    <p>Nuestra implementación del algoritmo MergeSort consta de tres partes:
 				<ul>
-					<p>
-					<li>El método mergesort(), que ordena cada sublista recursivamente aplicando el ordenamiento por mezcla.</li>
-					<li>El método merge(), que mezcla dos sublistas ordenadas en una lista, ordenada también.</li></p>
-					<li>El método sort(), que invoca una sola vez al método mergesort(), creando previamente un array auxiliar del mismo tamaño que la lista a ordenar.</li>
-					</p>
+					<li><p>El método mergesort(), que ordena cada sublista recursivamente aplicando el ordenamiento por mezcla.</li>
+					<li><p>El método merge(), que mezcla dos sublistas ordenadas en una lista, ordenada también.</li></p>
+					<li><p>El método sort(), que invoca una sola vez al método mergesort(), creando previamente un array auxiliar del mismo tamaño que la lista a ordenar.</li>
 				<ul/>
 			    </p>
 
@@ -123,8 +122,8 @@ https://templatemo.com/tm-529-ramayana
 				simultáneos.
 			  </p>
 			    	<ul>
-					<li><p>Concurrente: 2 colas, 1 máquina expendedora</p></li>
-					<li><p>Paralelo: 2 colas, 2 máquinas expendedoras</p></li>
+					<li><p>Concurrente: 2 colas, 1 máquina expendedora</li>
+					<li><p>Paralelo: 2 colas, 2 máquinas expendedoras</li>
 			    </ul>
 			  <p>
 				El framework fork / join fue diseñado para acelerar la ejecución de tareas que se pueden dividir en otras
