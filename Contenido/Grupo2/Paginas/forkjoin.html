@@ -136,11 +136,12 @@ https://templatemo.com/tm-529-ramayana
 				combinan de forma recursiva en un solo resultado. Esta es la parte de unión.
 				Cada hilo tiene su propia cola de dos extremos (deque) para almacenar las tareas que se ejecutarán.
 				Una deque es un tipo de cola que permite agregar o eliminar elementos de la parte delantera (cabeza) o de la
-				parte trasera (cola). Esto permite dos cosas:
+				  parte trasera (cola). Esto permite dos cosas:</p>
 				<ul>
 					<li>Un hilo puede ejecutar solo una tarea a la vez (la tarea que encabeza su deque).</li>
 					<li>Se implementa un algoritmo de robo de trabajo para equilibrar la carga de trabajo del hilo.</li>					
 				</ul>
+			<p>
 				Con el algoritmo de robo de trabajo, los subprocesos que se quedan sin tareas para procesar pueden robar tareas
 				de otros subprocesos que todavía están ocupados (eliminando tareas de la cola de su deque).
 				El marco fork /join de es una implementación de la interfaz ExecutorService que lo ayuda a aprovechar múltiples
@@ -149,10 +150,11 @@ https://templatemo.com/tm-529-ramayana
 				El centro del marco de fork /join es la clase ForkJoinPool, una extensión de la clase AbstractExecutorService.
 				ForkJoinPool implementa el algoritmo central de robo de trabajo y puede ejecutar procesos ForkJoinTask.
 				Tipos de especializaciones ForkJoinTask:
-				<ul>
-					<ol>Las instancias de RecursiveAction representan ejecuciones que no dan un valor de retorno.</ol>
-					<ol>Por el contrario, los casos de rendimiento RecursiveTask devuelven valores.</ol>					
-				</ul>
+				
+				<ol>
+					<li>Las instancias de RecursiveAction representan ejecuciones que no dan un valor de retorno.</li>
+					<li>Por el contrario, los casos de rendimiento RecursiveTask devuelven valores.</li>					
+				</ol>
 			    </p>
 
 			    <h2>USO BÁSICO</h2>
@@ -173,12 +175,12 @@ https://templatemo.com/tm-529-ramayana
 
 
 				Para resolver el problema anterior con ejecutores:
-				<ul>
-					<ol>Divida la matriz en el número de unidades de procesamiento físico disponibles.</ol>
-					<ol>Cree instancias invocables para calcular cada suma parcial.</ol>
-					<ol>Envíe las instancias a un ejecutor que administre un grupo de n subprocesos y recopile el resultado para
-				calcular la suma final.</ol>
-				</ul>
+				<ol>
+					<li>Divida la matriz en el número de unidades de procesamiento físico disponibles.</il>
+					<li>Cree instancias invocables para calcular cada suma parcial.</il>
+					<li>Envíe las instancias a un ejecutor que administre un grupo de n subprocesos y recopile el resultado para
+				calcular la suma final.</il>
+				</ol>
 			    </p>
 			    <h2>BIBLIOGRAFIA</h2>
 			    <p>
