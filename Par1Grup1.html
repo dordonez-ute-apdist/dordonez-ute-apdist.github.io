@@ -68,17 +68,53 @@ https://templatemo.com/tm-529-ramayana
                     width="700"
                     height="400"></div>
                  	
-		      <h1>¿Qué son los hilos?</h1>
-		      
+		      <h1>¿Qué son los hilos?</h1> 
+		      		<br>
+		      		<p align="justify">Un hilo es un flujo de control dentro de un programa. Creando varios hilos podremos realizar varias tareas simultáneamente. 
+					Cada hilo tendrá sólo un contexto de ejecución (contador de programa, pila de ejecución).</p>
+		      		</br>
+		    
+		      <h1>Creacion de Hilos</h1>
+		    		<br>
+		    	
+		    <p align="justify">En Java los hilos están encapsulados en la clase Thread. Para crear un hilo tenemos dos posibilidades:
+Heredar de Thread redefiniendo el método run().
+Crear una clase que implemente la interfaz Runnable que nos obliga a definir el método run().
+			    
+En ambos casos debemos definir un método run() que será el que contenga el código del hilo. Desde dentro de este método podremos llamar a cualquier otro método de cualquier objeto, 
+			    pero este método run() será el método que se invoque cuando iniciemos la ejecución de un hilo. El hilo terminará su ejecución cuando termine de ejecutarse este método run(). 
+			    Para crear nuestro hilo mediante herencia haremos lo siguiente: </p>
+		    		<br>
+		    
+		    <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/hilos.png"
+                    width="700"
+                    height="400"></div>
+		    
 			  	<br> </br>
 					<br> </br>
 		  
 		     	  <h1>Candado de uso exclusivo</h1>
-		          <iframe width="1124" height="643" src="https://www.youtube.com/embed/BzryUZQQHHY" frameborder="0" allow="accelerometer; 
-						autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+		
+		          <p align="justify">Cuando se utiliza la palabra clave synchronized se esta indicando una zona restringida para el uso de Threads, 
+				  esta zona restringida para efectos prácticos puede ser considerada un candado (“lock”) sobre la instancia del objeto en cuestión.</p>
 		      
+		<h1>Candado</h1>
+		
+			<p align="justify">Todos los objetos (incluidos los arrays) tienen un “candado” (lock). 
+				Solo un hilo puede tener bloqueado el candado de un objeto en un momento dado. 
+				Podrá bloquearlo más de una vez antes de liberarlo y solo quedará completamente libre cuando el hilo lo libere tantas veces como lo ha obtenido.  
+				Si  un hilo intenta obtener un candado ocupado, quedará suspendida hasta que éste se libere y pueda obtenerlo. No se puede acceder directamente a los candados..</p>
+				
+				<h1>Ejemplo de sincronizacion candado de uso exclusivo</h1>
+		
+				<iframe width="956" height="538" src="https://www.youtube.com/embed/sHwFkximn2E" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+				
 		      		<br> </br>
 					<br> </br>
+	
 			  <h1>Sincronizacion Java CandadoRW</h1>
 			  <iframe width="1124" height="634" src="https://www.youtube.com/embed/U78PUTafrOI" frameborder="0" allow="accelerometer; 
 						autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
