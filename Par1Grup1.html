@@ -136,8 +136,8 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 				  que terminen todos los hilos que hemos lanzado previamente. Esperar por un solo hilo no es problema, ese hilo tiene el método join() que hace exactamente eso, esperar a que termine </p>
 			  
 			 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 1.png"
-					    width="700"
-					    height="400"></div>
+					    width="500"
+					    height="300"></div>
 				<br>
 
 				<p align="justify">sin embargo, esperar por muchos hilos nos implicaría hacer muchas llamadas join(), una por cada hilo arrancado.
@@ -148,16 +148,16 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 					Si queremos que varios hilos empiecen a la vez (por ejemplo, 5 hilos), tendremos que hacer lo siguiente</p>
 					<br>
 					 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 2.png"
-										    width="700"
-										    height="400"></div>
+										    width="500"
+										    height="300"></div>
 					<br>
 					
 					<p align="justify">y cada hilo debe hacer la siguiente llamada</p>
 
 					<br>
 					 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 3.png"
-										    width="700"
-										    height="400"></div>
+										    width="500"
+										    height="300"></div>
 					<br>
 
 					<p align="justify">Si queremos esperar que los 5 hilos terminen su ejecución, debemos hacer una CyclicBarrier de 6, los 5 hilos más otro para nuestro propio hilo. El código sería</p>
@@ -165,8 +165,8 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 					<br>
 						
 					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 4.png"
-										    width="700"
-										    height="400"></div>
+										    width="500"
+										    height="300"></div>
 					<br>
 
 				<p align="justify">Los 5 hilos deberían hacer </p>
@@ -174,8 +174,8 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 					<br>
 						
 					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 5.png"
-										    width="700"
-										    height="400"></div>
+										    width="500"
+										    height="300"></div>
 					<br>
 					
 					<p align="justify"> y en nuestro código principal, después de lanzar los 5 hilos, haríamos</p>	
@@ -185,6 +185,8 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 6.png"
 										    width="500"
 										    height="300"></div>
+						<br>
+	
 					<p align="justify">El unico problema para este mecanismo es que los 5 hilos se quedan bloqueado sin terminar hasta que el hilo principal hace también su llamada a await().</p>
 
 		  		<br> </br>
@@ -192,9 +194,32 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 
 			  <h1>Sincronizacion Java Colas</h1>
 
-	    		 
-	    
-	  			  <br> </br>
+	    		 <br>
+			
+	    <p align="justify">Una Queue que además admite operaciones que esperan a que la cola no esté vacía al recuperar un elemento, y esperan a que haya espacio disponible en la cola cuando se almacena un elemento.</p>
+	  	<p align="justify">Los métodos BlockingQueue vienen en cuatro formas, con diferentes formas de manejar operaciones que no pueden satisfacerse inmediatamente, pero pueden satisfacerse en algún momento en el futuro: uno lanza una excepción, 
+			el segundo devuelve un valor especial (ya sea nulo o falso , dependiendo de la operación), el tercero bloquea el hilo actual indefinidamente hasta que la operación pueda tener éxito, y el cuarto bloquea solo por un límite de tiempo máximo dado antes de darse por vencido.</p>	
+			
+			<p align="justify">Un BlockingQueue no acepta elementos nulos . Las implementaciones lanzan NullPointerException en los intentos de agregar , poner u ofrecer un valor nulo . Un nulo se utiliza como valor centinela para indicar el fracaso de las operaciones de sondeo .
+
+			Un BlockingQueue puede tener un límite de capacidad. En cualquier momento puede tener una capacidad restante más allá de la cual no se 
+							pueden colocar elementos adicionales sin bloquear. Un BlockingQueue sin restricciones de capacidad intrínseca siempre informa una capacidad restante de Integer.MAX_VALUE .
+
+			Las implementaciones de BlockingQueue están diseñadas para usarse principalmente para colas de productor-consumidor, pero además son compatibles con la Collectioninterfaz. 
+							Entonces, por ejemplo, es posible eliminar un elemento arbitrario de una cola usando remove (x) . Sin embargo, estas operaciones en general no se realizan de manera muy eficiente y están pensadas para un uso ocasional, 
+								como cuando se cancela un mensaje en cola. </p>
+	
+				<p align="justify">Las implementaciones de BlockingQueue son seguras para subprocesos. Todos los métodos de cola logran sus efectos de forma atómica utilizando bloqueos internos u otras formas de control de concurrencia. 
+					Sin embargo, los graneles operaciones Collection addAll , containsAll , retainAll y removeAll se no necesariamente se llevan a cabo de forma atómica menos que se especifique lo contrario en una implementación. </p>
+					
+					<br>
+						
+					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/S-colas.png"
+										    width="500"
+										    height="300"></div>
+						<br>
+
+				<br> </br>
 		    			<br> </br>
 	 	 	  <h1>Sincronizacion Java Deadlock</h1>
 			  <iframe width="1124" height="643" src="https://www.youtube.com/embed/_cio2dG1-_Q" frameborder="0" allow="accelerometer; 
