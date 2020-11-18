@@ -136,8 +136,60 @@ En ambos casos debemos definir un método run() que será el que contenga el có
 			  <h1>Sincronizacion Java Barrera</h1>
 				<br>
 
-			  <p align="justify"> </p>
+			  <p align="justify">Cuando trabajamos con hilos en Java, nos puede interesar que varios hilos comiencen su ejecución a la vez o nos puede interesar esperar a 
+				  que terminen todos los hilos que hemos lanzado previamente. Esperar por un solo hilo no es problema, ese hilo tiene el método join() que hace exactamente eso, esperar a que termine </p>
 			  
+			 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 1.png"
+					    width="700"
+					    height="400"></div>
+				<br>
+
+				<p align="justify">sin embargo, esperar por muchos hilos nos implicaría hacer muchas llamadas join(), una por cada hilo arrancado.
+					Para arrancar varios hilos a la vez o para esperar que todos ellos terminen, java nos ofrece la clase CyclicBarrier. 
+					Esta clase se instancia pasándole en el constructor cuántos hilos debe sincronizar. Los hilos deben llamar al método await() de CyclicBarrier y se quedarán ahí detenidos. 
+					CyclicBarrier los liberará cuando tenga tantos hilos a la espera como se le haya indicado en el constructor.
+
+					Si queremos que varios hilos empiecen a la vez (por ejemplo, 5 hilos), tendremos que hacer lo siguiente</p>
+					<br>
+					 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 2.png"
+										    width="700"
+										    height="400"></div>
+					<br>
+					
+					<p align="justify">y cada hilo debe hacer la siguiente llamada</p>
+
+					<br>
+					 <div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 3.png"
+										    width="700"
+										    height="400"></div>
+					<br>
+
+					<p align="justify">Si queremos esperar que los 5 hilos terminen su ejecución, debemos hacer una CyclicBarrier de 6, los 5 hilos más otro para nuestro propio hilo. El código sería</p>
+
+					<br>
+						
+					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 4.png"
+										    width="700"
+										    height="400"></div>
+					<br>
+
+				<p align="justify">Los 5 hilos deberían hacer </p>
+					
+					<br>
+						
+					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 5.png"
+										    width="700"
+										    height="400"></div>
+					<br>
+					
+					<p align="justify"> y en nuestro código principal, después de lanzar los 5 hilos, haríamos</p>	
+
+					<br>
+						
+					<div align="center"><img src="Contenido/GRUPO 1/IMAGENES/Barrera 6.png"
+										    width="700"
+										    height="400"></div>
+
 		  		<br> </br>
 		    			<br> </br> 
 			  <h1>Sincronizacion Java Colas</h1>
