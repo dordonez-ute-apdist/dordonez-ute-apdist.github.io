@@ -64,76 +64,79 @@ https://templatemo.com/tm-529-ramayana
 			
 			<!-- Seccion izquierda texto -->
 
-						<h2><strong>¿ Qué es MapReduce?	</strong></h2>	<br>
-					  <p align="justify">MapReduce es un framework que proporciona un sistema de procesamiento de datos paralelo y distribuido. Su nombre se debe a las funciones principales que son Map y Reduce, las cuales explicaremos a continuación. MapReduce está pensado para la solución práctica de algunos problemas que pueden ser paralelizados, pero se ha de tener en cuenta que no todos los problemas pueden resolverse eficientemente con MapReduce. 
-						  	     MapReduce está orientado a resolver problemas con conjuntos de datos de gran tamaño, por lo que utiliza el sistema de archivos distribuido HDFS.</p>
-					  
-					  <h2><strong>JobTracker: Servidor maestro de MapReduce</strong></h2>
-                      <p align="left" style="font-size: 115%">
-						 <ul>
-							  <li align="left">&nbsp&nbsp&nbsp&nbsp Capacidad para manejar metadatos de trabajos</li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspDecide sobre la programació </li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspHay exactamente un JobTracker por cluster.</li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspRecibe peticiones de tareas enviadas por el cliente.</li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspPrograma y monitoriza los trabajos MapReduce con TaskTrackers.</li>
-              </ul>
-              <br>
-						<h2><strong>TaskTracker: Servidor esclavo de MapReduce</strong></h2>
-                      <p align="justify " style="font-size: 115%">
-						 <ul>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspEjecuta las solicitudes de trabajo de JobTrackers</li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspObtiene el código que se ejecutará </li>
-							  <li align="left">&nbsp&nbsp&nbsp&nbspAplica la configuración especifica del trabajo</li>
-							 <li align="left">&nbsp&nbsp&nbsp&nbspComunicación con el JobTracker: Envíos de la salida, finalizar tareas, actualización de tareas, etc.</li>
-							  
-					 	 </ul>
-					  </p>	
-						
+		      <center><h1>Exposicion y consulta #2: Docker </h1></center>
+			    <br>
+			  <h2>¿Que es Docker?</h2>
+			    <p> Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier máquina con Docker instalado,
+				    independientemente del sistema operativo que la máquina tenga por debajo, facilitando así también los despliegues.</p>
+			    <br>
+			  <br>
+			    <h2>Que es un contenedor<h2>
+				<p>Una forma de empaquetar software en un formato que incluye todo lo necesario para hacerlo funcionar y se ejecuta aislado del resto de la máquina
+					Tiene dos conceptos muy relacionados:
+					La imagen, que es un paquete ejecutable que incluye todo lo necesario
+					para ejecutar un software.
+					2.    El contenedor, que es la instancia en ejecución de una imagen, es decir, lo
+					que la imagen. </p>
+				    <br>
+				    <br>
+				    <h2>Que beneficios de Docker</h2>
+				    <p> Docker es una herramienta diseñada para beneficiar tanto a desarrolladores, testers, como administradores de sistemas, en relación a las máquinas, a los entornos en sí donde se ejecutan las aplicaciones software.
+					Docker también es muy bueno para el testing, para tener entornos de pruebas. 
+					Por un lado, es muy sencillo crear y borrar un contenedor, además de que son muy ligeros, por lo que podemos ejecutar varios contenedores en una misma máquina (donde dicho contenedor tendría el entorno de nuestra 
+					    aplicación: base de datos, servidor, librerías, etc. </p>
+				    <br>
+				    <br>
+				    <h2>Como funciona docker<h2>
+				    <p> La tecnología Docker usa el kernel de Linux y las funciones de este, como Cgroups y namespaces, para segregar los procesos, de modo que puedan ejecutarse de manera independiente. 
+					Ofrece un modelo de implementación basado en imágenes. Esto permite compartir una aplicación, o un conjunto de servicios, con todas sus dependencias en varios entornos. 
+					Docker también automatiza la implementación de la aplicación (o conjuntos combinados de procesos que constituyen una aplicación) en este entorno de contenedores.</p>
+					<p>Docker se instala en cada servidor y proporciona comandos sencillos que puede utilizar para crear, iniciar o detener contenedores.
+					   Los servicios de AWS como AWS Fargate, Amazon ECS, Amazon EKS y AWS Batch hacen que resulte sencillo ejecutar y administrar contenedores de Docker a escala. </p>
+				    <br>
+			            <h2>Porque usar Docker</h2>
+			            <p> Docker le permite entregar código con mayor rapidez, estandarizar las operaciones de las aplicaciones, transferir el código con facilidad y ahorrar dinero al mejorar el uso de recursos. 
+				        Con Docker, obtiene un solo objeto que se puede ejecutar de manera fiable en cualquier lugar. La sintaxis sencilla y simple de Docker le aporta un control absoluto. </p>
+				    <br>
+				    <h2>Usos de Docker</h2
+				    <br>
+				    <p>Simplificación de las configuraciones:</p>
+					<p>Una de las ventajas de la virtualización , es que podemos crear una máquina virtual, guardar los archivos y montarla en otro equipo manteniendo el último estado y la configuración en la parte superior de su estructura.
+					Esto mismo hace Docker, pero omitiendo todo el sistema que normalmente tendríamos que generar para poder lanzar el servicio, ocupando menos espacio y tomando muchísimos menos recursos del equipo . </p>
+			
+			            <p>Gestión de proyectos:</p>
+					<p>Uno de los mayores problemas a los que se enfrentan los equipos de desarrollo, es el tener que trabajar todos bajo el mismo entorno.
+					Docker hace que el camino de desarrollo de producción sea muchísimo más rápido , no teniendo más que desplegar el mismo contenedor todos los desarrolladores o testers, para recibir todos idénticos resultados.</p>
 				
-				<!--separador negro-->
-				
-      <strong><h1>&nbsp</h1></strong>	
-      	
-
-                         <!--fin separador negro-->
-						
-
-    	
-			<!-- Seccion fin izquierda texto -->
-		
-              <!-- Seccion derecha texto -->
-
-
-			 <h2><strong>Funcion Reduce</strong></h2>
-			 <p align="justify">La función Reduce se aplica en paralelo para cada grupo creado por la función Map().La función Reduce se llama una vez para cada clave única de la salida de la función Map. Junto con esta clave, se pasa una lista de todos los valores asociados con la clave para que pueda realizar alguna fusión para producir un conjunto más pequeño de los valores.
-			 Reduce (clave2, lista(valor2)) –> lista(valor2)
-			Cuando se inicia la tarea reduce, la entrada se encuentra dispersa en varios archivos a través de los nodos en las tareas de Map. Los datos obtenidos de la fase Map se ordenan para que los pares clave-valor sean contiguos (fase de ordenación, sort fase), esto hace que la operación Reduce se simplifique ya que el archivo se lee secuencialmente.	 
-            </p>	 </br> 
-            <div><img width="50px" height="400px" src="../../../Contenido/GRUPO 1/IMAGENES/FuncionReduce.png" align="center" ></div>
-            
-
-            
-
-          </br> </br> </br> </br> </br> </br> </br>
-
-          <h2><strong>Funcion Map</strong></h2>
-          <p align="justify"> La función Map recibe como parámetros un par de (clave, valor) y devuelve una lista de pares. Esta función se encarga del mapeo y se aplica a cada elemento de la entrada de datos, por lo que se obtendrá una lista de pares por cada llamada a la función Map. Después se agrupan todos los pares con la misma clave de todas las listas, creando un grupo por cada una de las diferentes claves generadas. No hay requisito de que el tipo de datos para la entrada coincida con la salida y no es necesario que las claves de salida sean únicas.</p>
-
-           <p align="center">Map (clave1, valor1) –> lista (clave2, valor2)</p> 
-            
-            <p>La operación de Map se paraleliza, el conjunto de archivos de entrada se divide en varias tareas llamado FileSplit, el tamaño típico de bloque es de 128MB. Las tareas se distribuyen a los nodos TaskTrackers, y estos a su vez pueden realizar la misma tarea si hiciera falta.</p>	 </br> 
-               <img width="450px" height="400px" src="../../../Contenido/GRUPO 1/IMAGENES/FuncionMap.png" align="center" >
-   
-               
-   
-             </br> </br> </br>          
-
-					<div align="center">
-            <h1>Ejemplo de MapReduce</h1>
-            <iframe width="500" height="400" src="https://www.youtube.com/embed/cW8racyXuvY" frameborder="0" allow="accelerometer; 
-            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+				    <p>Ahorro de costes en servidores:</p>
+					<p>Virtualizando estos servidores con Docker, el ahorro en hardware y el aprovechamiento o rendimiento del existente será considerable , sin un consumo de memoria tan alto y con la capacidad de gestionar más eficientemente 
+					la memoria disponible entre los servicios que lo requieran; a diferencia de las máquinas virtuales tradicionales </p>
+					    <br><br>
+			            <h2>Cuando usar Docker</h2>
+					    <ul>
+						    <li>Manejar versiones de entornos junto al código de las aplicaciones</li>
+						    <li>Ambientes de integración continua </li>
+						    <li>Entornos desechables</li>
+						    <li>Entornos colaborativos </li>
+						    <li>Garantizar la integridad de la aplicación en todos los ambientes</li>
+					    </ul>
+					    <br>
+				    <h2>¿Qué diferencia a Docker respecto a una máquina virtual?</h2>   
+					    <p> Un contenedor es más ligero, ya que mientras que a una máquina virtual necesitas instalarle un sistema operativo para funcionar, 
+						un contenedor de Docker funciona utilizando el sistema operativo que tiene la máquina en la que se ejecuta el contenedor.</p>
+					    
+					    <p> Para una mayor explicacion de docker vea el siguiente video: </p> 
+					    <br>
+					    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/pn0eeYr_8U8" frameborder="0" allow="accelerometer; autoplay; 
+					         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center
+			    <br>
+                    </div>
+                  </div>
+                </div>  
+              </div>
           </div>
+        </div>
+
 					
       <!-- Sidebar -->
         <div id="sidebar">
