@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>GRUPO 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../../../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../../../assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="../../../assets/css/owl.css">
+
+  </head>
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../../../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../../../assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="../../../assets/css/owl.css">
+
+  </head>
+
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="index.html">Consultas Grupo 1</a>
+              </div>
+            </header>
+
+           <!-- Start About TITULO -->
+          
+						<h1 align="center"><span><strong>Título: Inversion De Control</strong></span></h1><br>	
+
+				
+				<!-- Start About -->
+			
+			<!-- Seccion izquierda texto -->
+
+						<h2><strong> Inversión de control	</strong></h2>	<br>
+					  <p align="justify">Es un principio de diseño de software en el que el flujo de ejecución de un programa se invierte respecto a los métodos de programación tradicionales.
+              la inversión de control se especifican respuestas deseadas a sucesos o solicitudes de datos concretas, dejando que algún tipo de entidad o arquitectura externa lleve a cabo las acciones
+              de control que se requieran en el orden necesario y para el conjunto de sucesos que tengan que ocurrir.
+              Esta nueva filosofía es muy útil cuando se usan frameworks de desarrollo. Es el framework el que toma el control, el que define el flujo de actuación o el ciclo de vida de una petición. 
+              Es decir, es el framework quien ejecuta el código de usuario            
+                                                     
+             <br><br>         
+
+           <h2><strong>Funcionamiento	</strong></h2>	<br>
+            <p align="justify">Inversion of control (IoC) es una forma de trabajar que rompe con el formato tradicional, en donde el programar es el encargado de definir la secuencia de operaciones que se deben
+               de realizar para llegar a un resultado. En este sentido el programador debe conocer todos los detalles del framework y las operaciones a realizar en él, por otra parte, el Framework no conoce 
+               absolutamente nada de nuestro programa. Es decir, solo expone operaciones para ser ejecutada. La siguiente imagen muestra la forma de trabajo normal.
+            </p>
+            <div><img width="100px" height="300px" src="../../../Contenido/GRUPO 1/IMAGENES/runtime.png"  ></div>
+             <br><br> 
+
+            <p align="justify">Veamos que nuestra aplicación es la que llama en todo momento al Framework y este hace lo que la App le solicita. Por otra parte, al Framework no le interesa en absoluto la App.
+              Pero qué pasaría si invirtiéramos la forma de trabajo, y que en lugar de que la App llame funciones del Framework, sea el Framework el que ejecute operaciones sobre la App, ¿suena extraño no? 
+              Pues en realidad a esta técnica es a la que se le conoce como Inversion of Control. Veamos en la siguiente imagen como es que funciona IoC:.</p>
+            <div><img width="100px" height="300px" src="../../../Contenido/GRUPO 1/IMAGENES/runtime2.png" ></div>
+           <br><br>
+           <p align="justify">Esta última imagen se ve bastante parecida a la anterior, sin embargo, tiene una gran diferencia, y es que las llamadas se invirtieron, 
+            ahora es el Framework es el realiza operaciones sobre nuestra App.
+            Seguramente a estas alturas te pregunta cómo es que un Framework que no conoce tu App y que incluso se compilo desde mucho antes puede realizar operaciones 
+            sobre nuestra App. La respuesta es simple pero complicada, y es que utilizar este IoC es mucho más simple de lo que parecería, pero implementar un Framework 
+            de este tipo tiene un grado alto de complejidad, dicho de otra manera, si tú eres la App puedes implementar muy fácilmente al Framework, pero si tu estas desarrollando
+            el Framework puede ser un verdadero dolor de cabeza.</p>
+            <div><img width="100px" height="300px" src="../../../Contenido/GRUPO 1/IMAGENES/runtime3.png" ></div>
+            <br><br>
+            <p align="justify">Analicemos la imagen, primero el Framework analizará al App mediante los metadatos, este encontrará la clase EmployeeService que esta anotada con @Service,
+            seguido le inyectará una instancia del TrasnactionManager mediante el método setTransactionManager que esta anotado con @Resource, finalmente el servicio será retornado a la App
+            para ser utilizado.Cabe mencionar que los proxys son clave para controlar como la forma en que el usuario utiliza las operaciones. Puedes encontrar mucho más de este patrón en mi libro.</p>
+            <br><br>
+          </ul>
+
+					<div align="center">
+            <h1>Ejemplo  Inversión de control</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vFzP2SaMyA0" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+          </div>
+					
+      <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            <section id="search" class="alt">
+              <form method="get" action="#">
+                <input type="text" name="search" id="search" placeholder="Search..." />
+              </form>
+            </section>
+              
+           <!-- Menu -->
+            <nav id="menu">
+              <ul>
+                <li><a href="../../../index.html"> PAGINA PRINCIPAL</a></li>
+		
+		  <li>
+                  <span class="opener">PARCIAL 1</span>
+                  <ul>
+	                  <li><a href="../../../Par1Grup1.html">TEMA #1 Paralelismo e hilos en Java</a></li>
+                    <li><a href="../../../Par1Grup2.html">TEMA #2 Forkjoin</a></li>
+                    <li><a href="../../../Par1Grup3.html">TEMA #3 Java Strem Paralelas</a></li>
+                    <li><a href="../../../Par1Grup4.html">TEMA #4 Java Streams </a></li>
+                    <li><a href="../../../Par2Grup1.html">TEMA #5 TCP/IP, Sockets UDP y TCP</a></li>
+                  </ul>
+                    
+      </li>
+		      
+		  <li>
+                  <span class="opener">PARCIAL 2</span>
+                  <ul>
+                    <li><a href="#">TEMA #1</a></li>
+                    <li><a href="#">TEMA #2</a></li>
+                    <li><a href="#">TEMA #3</a></li>
+                    <li><a href="#">TEMA #4</a></li>
+                  </ul>
+     </li>
+		      
+		<li>
+                  <span class="opener">PARCIAL 3</span>
+                  <ul>
+                    <li><a href="#">TEMA #1</a></li>
+                    <li><a href="#">TEMA #2</a></li>
+                    <li><a href="#">TEMA #3</a></li>
+                    <li><a href="#">TEMA #4</a></li>
+                  </ul>
+    </li>
+		
+                			
+   <li>
+                  <span class="opener">CONSULTAS</span>
+                  <ul>
+                    <li><a href="../../../ConsultGrupo1.html">GRUPO #1</a></li>
+                    <li><a href="../../../ConsultGrupo2.html">GRUPO #2</a></li>
+                    <li><a href="../../../ConsultGrupo3.html">GRUPO #3</a></li>
+                    <li><a href="../../../ConsultGrupo4.html">GRUPO #4</a></li>
+                  </ul>
+   </li>
+	
+   </ul>
+  </nav>
+ 
+
+ <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright">Copyright &copy; 2020 Company Name
+              <br>Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a></p>
+            </footer>
+            
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../../assets/js/browser.min.js"></script>
+    <script src="../../../assets/js/breakpoints.min.js"></script>
+    <script src="../../../assets/js/transition.js"></script>
+    <script src="../../../assets/js/owl-carousel.js"></script>
+    <script src="../../../assets/js/custom.js"></script>
+</body>
+
+
+  </body>
+
+</html>
