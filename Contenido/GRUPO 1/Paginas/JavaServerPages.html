@@ -64,79 +64,111 @@ https://templatemo.com/tm-529-ramayana
 			
 			<!-- Seccion izquierda texto -->
 
-						<h2><strong>¿ Qué es una maquina virtual?	</strong></h2>	<br>
-					  <p align="justify">Una máquina virtual es un software que crea una capa independiente donde se emula el funcionamiento de un ordenador real con todos los componentes de hardware 
-                               que necesita para funcionar (disco duro, memoria RAM, tarjetas de red, tarjeta gráfica, etc.) y que puede ejecutar cualquier sistema operativo o programa,
-                                tal y como lo haría un ordenador real. Toda esta emulación se encapsula en una serie de archivos que actúan como contendor desde el que se ejecuta la máquina virtual
-                                en una ventana de tu ordenador como si de un programa más se tratara y sin que nada de lo que suceda en el interior de esa ventana afecte al ordenador que la ejecuta.
-                                <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/maquina 1.jpg" align="center" ></p>
+						<h2><strong>¿ Qué es Java Server Pages?	</strong></h2>	<br>
+		  			<p  align="justify">Java Server Pages (JSP) es una tecnología que ayuda a los desarrolladores de software 
+						a crear páginas web dinámicas basadas en HTML y XML,
+						entre otros tipos de documentos. JSP es similar a PHP, 
+						pero usa el lenguaje de programación Java.</p>
+		  				<br>
+					  <p  align="justify">Para desplegar y correr Java Server Pages, se requiere un servidor web compatible 
+						  con contenedores servlet como Apache Tomcat o Jetty.</p>
+		  				<br>
+					  <p  align="justify">La principal ventaja de JSP frente a otros lenguajes es que el lenguaje Java es un lenguaje de propósito general 
+						  que excede el mundo web y que es apto para crear clases 
+						  que manejen lógica de negocio y acceso a datos de una manera prolija.
+						  Esto permite separar en niveles las aplicaciones web,
+						  dejando la parte encargada de generar el documento HTML en el archivo JSP.</p>
+		  				<br>
+					  <p align="justify">Las JSPs son en realidad una forma alternativa de crear servlets ya que el código JSP se traduce a código de servlet 
+						  Java la primera vez que se le invoca y en adelante es el código del nuevo servlet el que se ejecuta produciendo como salida el código HTML 
+						  que compone la página web de respuesta.</p>
                                         
                                 <br><br>         
-           <h2><strong>¿Para que sirven las maquinas virtuales?	</strong></h2>	<br>
-            <p align="justify">Existen diversos usos para las máquinas virtuales, pero ya que permiten emular casi cualquier sistema operativo estándar (Windows, GNU/Linux, MacOS, Android, etc.),
-             y dado que se ejecutan en una capa de software diferente y totalmente aislada, uno de los usos más frecuentes es el de probar diferentes sistemas operativos, programas o configuraciones
-             con total seguridad para tu ordenador real ya que, si algo falla en la máquina virtual, este fallo no afectará en absoluto al ordenador que la ejecuta.
-             De ese modo, si por ejemplo, sospechamos de un archivo que pudiera estar infectado por un virus o software malicioso, podemos ejecutarlo en una máquina virtual para comprobar su fiabilidad.
-             Si no sucede nada, podremos usarlo en nuestro equipo. En caso contrario, sólo afectará a la máquina virtual y nuestro equipo se mantendrá inmune al ataque.
-             <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/maquina 2.jpg" align="center" ></div></p>
+           <h2><strong>Variables implícitas<strong></h2>	<br>
+            <p align="justify">Las páginas JSP incluyen ciertas variables privilegiadas sin necesidad de declararlas ni configurarlas:
+             <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/JSP-DOC-1.png" align="center" ></div></p>
              <br><br> 
 
-             <h2><strong>Tipos De Maquinas Virtuales</strong></h2>
-             <p align="left" style="font-size: 115%">
-            <ul>
-            <li align="left">Máquinas virtuales de sistema</li>
-            <p align="justify">➢	También denominadas máquinas virtuales de virtualización completa, proporcionan un sustituto de una máquina real. 
-              Proporcionan la funcionalidad necesaria para ejecutar sistemas operativos completos.</p>
-            <li align="left">	Máquinas virtuales de proceso </li>
-            <p align="justify">➢Están diseñadas para ejecutar programas informáticos en un entorno independiente de la plataforma. 
-              Algunas máquinas virtuales, como QEMU, están diseñadas para emular también diferentes arquitecturas y permitir la ejecución de aplicaciones de software y sistemas operativos
-              escritos para otra CPU o arquitectura.</p>
+             <h2><strong>Directivas</strong></h2>
+             <p align="justify">Son etiquetas a partir de las cuales se genera información que puede ser utilizada por el motor de JSP.
+		     No producen una salida visible al usuario, sino que configura cómo se ejecutará la página JSP.</p>
               <br><br> 
 
-            <h2><strong>Máquinas virtuales de sistema</strong></h2>	<br>
-              <p align="justify">Una máquina virtual de sistema es aquella que emula a un ordenador completo. En palabras llanas, es un software que puede hacerse pasar por otro dispositivo como un PC 
-                de tal modo que puedes ejecutar otro sistema operativo en su interior. Tiene su propio disco duro, memoria, tarjeta gráfica y demás componentes de hardware, aunque todos ellos son virtuales.
-                Que sus componentes sean virtuales no quiere decir necesariamente que no existan. Por ejemplo, una máquina virtual puede tener unos recursos reservados de 2 GB de RAM y 20 GB de disco duro,
-                que obviamente salen de algún sitio: del PC donde está instalada la máquina virtual, también llamado a veces el hipervisor, el host o el anfitrión. Otros dispositivos podrían realmente ser
-                 inexistentes físicamente, como por ejemplo un CD-ROM que en verdad es el contenido de una imagen ISO en vez de un lector de CD de verdad.</p>
-                 <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/maquina sistemas.jpg" align="center" >
+            <h2><strong>Las directivas disponibles son:</strong></h2>	<br>
+              <p align="justify">include: Incluye el contenido de un fichero en la página mediante el atributo file.
+<%@ include file="cabecera.html" %>
+taglib: Importa bibliotecas de etiquetas (Tag Libraries)
+<%@ taglib uri="/tags/struts-html" prefix="html" %>
+page: Especifica atributos relacionados con la página a procesar. Los atributos son:
+</p>
+                 <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/JSP-DOC-2.png" align="center" >
                   <br><br>
 
-           <h2><strong>Máquinas virtuales de Procesos</strong></h2>	<br>
-              <p align="justify">Una máquina virtual de proceso es menos ambiciosa que una de sistema. En vez de emular un PC por completo, ejecuta un proceso concreto, como una aplicación, en su entorno
-                 de ejecución.Esto es de utilidad a la hora de desarrollar aplicaciones para varias plataformas, pues en vez de tener que programar específicamente para cada sistema, el entorno de ejecución 
-                 (es decir, la máquina virtual) es el que se encarga de lidiar con el sistema operativo. </p>
-                 <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/maquina procesos.jpg" align="center" >
+           <h2><strong>¿Qué es una aplicación WEB?</strong></h2>	<br>
+              <p align="justify">Es un sitio WEB cuyas páginas son generadas dinámicamente. 
+		      (Esto que se generan dinámicamente quiere decir que dependiendo de la acción del usuario en esa página el servidor nos mandara unas páginas u otras). 
+		      Dependiendo de la acción del usuario, se generan unas páginas u otras. </p>
+			 <br>
+			 <p align="justify">(Como cuando damos click en buscar lo que hace es se envía una petición al servidor que procesa la información y 
+				 el servidor consulta con una base de datos para obtener información, 
+				 la base de datos envía los datos de vuelta al servidor que 
+				 procesa la respuesta genera una página web dinámica y nos envía esta página web dinámica 
+				 que ha construido en parte los datos que le proporcionó la base de datos) </p>
+			 <br>
+			 <p align="justify">Es un código JAVA que se ejecuta en un servidor web no local
+				Lee las acciones del usuario casi siempre desde formularios HTML
+				Devuelve una página HTML que se genera de forma dinámica dependiendo de las acciones del usuario.
+				 </p>
+			 <br><br>
+			 
+			 <h2><strong>Motor JSP</strong></h2>	<br>
+			 
+			 <p align="justify">El motor de las páginas JSP está basado en los servlets de Java,
+				 programas en Java destinados a ejecutarse en el servidor </p>
+			 <br>
+			 
+			 <p align="justify">En JSP creamos páginas de manera parecida a como se crean en ASP o PHP, otras dos tecnologías de servidor. 
+				 Generamos archivos con extensión .jsp que  se incluyen dentro de la estructura de etiquetas HTML, 
+				 las sentencias Java que se ejecutarán  en el servidor. Antes de que sean funcionales los archivos, 
+				 el motor JSP lleva a cabo una fase de traducción de esa página en un servlet, 
+				 implementado en un archivo class (Bytecodes de Java). Esta fase de traducción se lleva a cabo habitualmente cuando se recibe la primera solicitud de la página .
+				 jsp, aunque existe la opción de pre-compilar en código para evitar ese tiempo de espera la primera vez que un cliente solicita la página. </p>
+			 <br>
+			 
+                 <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/JSP-DOC-3.png" align="center" >
                  <br><br>
 
+			 
+ <h2><strong>¿QUÉ ES UN SERVLET?</strong></h2>	<br>
+
+			  <p align="justify"> Los Servlets son tecnología que se ejecuta del lado del servidor y procesan todas las peticiones que hace un cliente, 
+				  si figuramos el MVC (Modelo Vista Controlador), un servlet hace de controlador, esto quiere decir que recibe la petición desde el navegador,
+				  si la petición es la búsqueda de un cliente (en una base de datos), el servlet delega al modelo a recuperar el cliente y lo envía (response) al navegador a través de una página JSP.</p>
+			  	<br>
+			 <div><img width="100px" height="600px" src="../../../Contenido/GRUPO 1/IMAGENES/JSP-DOC-4.png" align="center" >
+                 
+			 <br><br>
+				 
+			 <h2><strong>¿QUÉ PUEDO HACER CON JSP Y SERVLET?</strong></h2>	<br>
+			
+				 <p align="justify"> A través de una página JSP puedes crear un formulario que incluya datos como por ejemplo: nombres, 
+					 apellidos y con ayuda de un servlet enviarlos a guardar en una base de datos,
+					 puedes obtener información de una base de datos y mostrarle al usuario esos datos, 
+					 como mínimo eso es lo que puedes hacer. 
+					 En fin puedes crear desde algo sencillo hasta una gran aplicación web.
+				 </p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     </ul>
+			 </ul>
 
 
 
    			  
 					<div align="center">
-            <h1>Ejemplo Maquina Virtuales</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/F-sM9zbk76A" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+            <h1>Ejemplo de Java server pages</h1>
+           <iframe width="702" height="395" src="https://www.youtube.com/embed/gvwjmUy7Iw8" frameborder="0"
+		   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		   allowfullscreen></iframe>
           </div>
 					
       <!-- Sidebar -->
@@ -171,10 +203,11 @@ https://templatemo.com/tm-529-ramayana
 		       <li>
                   <span class="opener">PARCIAL 2</span>
                   <ul>
-                    <li><a href="#">TEMA #1</a></li>
+                    <li><a href="Par2Grup3.html">TEMA #1 Virtualizacion & Contenedorizacion </a></li>
                     <li><a href="#">TEMA #2</a></li>
-                    <li><a href="#">TEMA #3</a></li>
+                    <li><a href="Par3Grup1SPRINGWEB.html">TEMA #3 Spring Web y MVC</a></li>
                     <li><a href="#">TEMA #4</a></li>
+		    <li><a href="Par2Grup3Tm5.html">TEMA #5 Plantillas web Spring</a></li>
                   </ul>
                 </li>
 		      
