@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>TCP/IP, Sockets UDP y TCP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="index.html">Parcial #2</a>
+              </div>
+            </header>
+
+            <!-- Page Heading -->
+            <div class="page-heading">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+			  
+			  <h1 align="center">MVC</h1>
+        		  <p align="justify">Modelo-vista-controlador (MVC) es un patrón de arquitectura de software, que separa los datos y principalmente lo que es la lógica de negocio de una aplicación de su representación y el módulo encargado de gestionar los eventos y las comunicaciones.</p>
+                  
+                  <ul>
+                    <li type="disc">HMVC (MVC Jerárquico)</li>
+                    <li type="disc">MVA (Modelo-Vista-Adaptador)</li>
+                    <li type="disc">MVP (Modelo-Vista-Presentador)</li>
+                    <li type="disc">MVVM (Modelo-Vista Vista-Modelo)</li>
+                </ul>
+
+                  
+
+                    <br>
+                    <h1>Modelo</h1>
+                    <p align="justify">Es la representación de la información con la cual el sistema opera, por lo tanto gestiona todos los accesos a dicha información, tanto consultas como actualizaciones, implementando también los privilegios de acceso que se hayan descrito en las especificaciones de la aplicación (lógica de negocio). Envía a la 'vista' aquella parte de la información que en cada momento se le solicita para que sea mostrada (típicamente a un usuario). Las peticiones de acceso o manipulación de información llegan al 'modelo' a través del 'controlador</p>
+                    <h1>Controlador</h1>
+                    <p align="justify">Responde a eventos (usualmente acciones del usuario) e invoca peticiones al 'modelo' cuando se hace alguna solicitud sobre la información (por ejemplo, editar un documento o un registro en una base de datos). También puede enviar comandos a su 'vista' asociada si se solicita un cambio en la forma en que se presenta el 'modelo' (por ejemplo, desplazamiento o scroll por un documento o por los diferentes registros de una base de datos), por tanto se podría decir que el 'controlador' hace de intermediario entre la 'vista' y el 'modelo' (Middleware).</p>
+                    <h1>Vista</h1>
+                    <p align="justify">Presenta el 'modelo' (información y lógica de negocio) en un formato adecuado para interactuar (usualmente la interfaz de usuario), por tanto requiere de dicho 'modelo' la información que debe representar como salida.
+                    </p>
+                    <br><br><br>
+                    <h1>Interacción de los componentes</h1>
+                    <p align="justify">Aunque se pueden encontrar diferentes implementaciones de MVC, el flujo de control que se sigue generalmente es el siguiente:</p>
+                    <p align="justify">1. El usuario interactúa con la interfaz de usuario de alguna forma (por ejemplo, el usuario pulsa un botón, enlace, etc.)</p>
+                    <p align="justify">2. El controlador recibe (por parte de los objetos de la interfaz-vista) la notificación de la acción solicitada por el usuario. El controlador gestiona el evento que llega, frecuentemente a través de un gestor de eventos (handler) o callback.</p>
+                    <p align="justify">3. El controlador accede al modelo, actualizándolo, posiblemente modificándolo de forma adecuada a la acción solicitada por el usuario (por ejemplo, el controlador actualiza el carro de la compra del usuario). Los controladores complejos están a menudo estructurados usando un patrón de comando que encapsula las acciones y simplifica su extensión.</p>
+                    <p align="justify">4. En general el controlador no pasa objetos de dominio (el modelo) a la vista aunque puede dar la orden a la vista para que se actualice. Nota: En algunas implementaciones la vista no tiene acceso directo al modelo, dejando que el controlador envíe los datos del modelo a la vista. Por ejemplo en el MVC usado por Apple en su framework Cocoa. Suele citarse como Modelo-Interface-Control, una variación del MVC más puro</p>
+                    <p align="justify">5. La interfaz de usuario espera nuevas interacciones del usuario, comenzando el ciclo nuevamente</p>
+                    <img src="Contenido/GRUPO 1/IMAGENES/mvc 2.png"
+                    width="700"
+                    height="500">
+
+
+                    
+                
+                
+                <h1>Uso en aplicaciones Web</h1>
+                <p align="justify">Aunque originalmente MVC fue desarrollado para aplicaciones de escritorio, ha sido ampliamente adaptado como arquitectura para diseñar e implementar aplicaciones web en los principales lenguajes de programación. Se han desarrollado multitud de frameworks, comerciales y no comerciales, que implementan este patrón (ver apartado siguiente "Frameworks MVC"); estos frameworks se diferencian básicamente en la interpretación de como las funciones MVC se dividen entre cliente y servidor.</p>
+                <p align="justify">Los primeros frameworks MVC para desarrollo web planteaban un enfoque de cliente ligero en el que casi todas las funciones, tanto de la vista, el modelo y el controlador recaían en el servidor. En este enfoque, el cliente manda la petición de cualquier hiperenlace o formulario al controlador y después recibe de la vista una página completa y actualizada (u otro documento); tanto el modelo como el controlador (y buena parte de la vista) están completamente alojados en el servidor. </p>
+                
+                
+                <br><br><br>
+
+                <h1>Ejemplo de Aplicacion WEB con MVC</h1>
+                <iframe width="600" height="300" src="https://www.youtube.com/embed/dvEmxrsp4os" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                        
+                
+
+            </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simple Post -->
+          <!--   <section class="simple-post">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    
+                    <div class="down-content">
+                    </div>
+                  </div>
+                </div>-->
+                
+               
+                
+              </div>
+           
+              
+
+      <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            <section id="search" class="alt">
+              <form method="get" action="#">
+                <input type="text" name="search" id="search" placeholder="Search..." />
+              </form>
+            </section>
+              
+          <!-- Menu -->
+            <nav id="menu">
+              <ul>
+                <li><a href="index.html"> PAGINA PRINCIPAL</a></li>
+		
+		 <li>
+                  <span class="opener">PARCIAL 1</span>
+                  <ul>
+                    <li><a href="Par1Grup1.html">TEMA #1 Paralelismo e hilos en Java</a></li>
+                    <li><a href="Par1Grup2.html">TEMA #2 FORKJOIN</a></li>
+                    <li><a href="Par1Grup3.html">TEMA #3</a></li>
+                    <li><a href="Par1Grup4.html">TEMA #4</a></li>
+                    <li><a href="Par2Grup1.html">TEMA #5 TCP/IP, Sockets UDP y TCP</a></li>
+                  </ul>
+                </li>
+		      
+		        <li>
+                    <span class="opener">PARCIAL 2</span>
+                    <ul>
+                      <li><a href="Par2Grup3.html">TEMA #1 Virtualizacion & Contenedorizacion </a></li>
+                      <li><a href="#">TEMA #2</a></li>
+                      <li><a href="Par3Grup1SPRINGWEB.html">TEMA #3 Spring Web y MVC</a></li>
+                      <li><a href="#">TEMA #4</a></li>
+                          <li><a href="Par2Grup3Tm5.html">TEMA #5 Plantillas web Spring</a></li>	  
+                    </ul>
+              </li>
+		      
+		       <li>
+                  <span class="opener">PARCIAL 3</span>
+                  <ul>
+                    <li><a href="#">TEMA #1</a></li>
+                    <li><a href="#">TEMA #2</a></li>
+                    <li><a href="#">TEMA #3</a></li>
+                    <li><a href="#">TEMA #4</a></li>
+                  </ul>
+                </li>
+		
+                			
+                <li>
+                  <span class="opener">CONSULTAS</span>
+                  <ul>
+                    <li><a href="ConsultGrupo1.html">GRUPO #1</a></li>
+                    <li><a href="ConsultGrupo2.html">GRUPO #2</a></li>
+                    <li><a href="ConsultGrupo3.html">GRUPO #3</a></li>
+                    <li><a href="ConsultGrupo4.html">GRUPO #4</a></li>
+                  </ul>
+                </li>
+	
+              </ul>
+            </nav>
+
+
+            <!-- Featured Posts -->
+           <!--    <div class="featured-posts">
+              <div class="heading">
+                <h2>Featured Posts</h2>
+              </div>
+              <div class="owl-carousel owl-theme">
+                <a href="#">
+                  <div class="featured-item">
+                   <img src="assets/images/featured_post_01.jpg" alt="featured one">
+                    <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="assets/images/featured_post_01.jpg" alt="featured two">
+                    <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="assets/images/featured_post_01.jpg" alt="featured three">
+                    <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
+                  </div>
+                </a>
+              </div>
+            </div> -->
+
+            <!-- Footer -->
+        <!--   <footer id="footer">
+              <p class="copyright">Copyright &copy; 2020 Company Name
+              <br>Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a></p>
+            </footer>-->
+            
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+  </body>
+
+</html>
