@@ -62,134 +62,62 @@ https://templatemo.com/tm-529-ramayana
                     <div class="service-item first-item">
          		
 			   <h1>Inyección de dependencias</h>
-			    <h2>¿Qué es VirtualBox?</h2>
+			    <h2>Definición</h2>
 			    <p>
-				VirtualBox es un software para virtualización, tambien conocido como hipervisor de tipo 2, que se utilizar para virtualizar 
-				sistemas operativos dentro de nuestro ordenador existente, creando lo que se conoce como máquina virtual. Un hipervisor de 
-				tipo 2 se diferencia con los de tipo 1 en que necesita un sistema operativo para funcionar, a diferencia de los de tipo 1 en 
-				los que el propio hipervisor funciona sobre el hardware, o máquina host.
-				VirtualBox es una aplicación que sirve para hacer máquinas virtuales con instalaciones de sistemas operativos. Esto quiere decir 
-				que si tienes un ordenador con Windows, GNU/Linux o incluso macOS, puedes crear una máquina virtual con cualquier otro sistema 
-				operativo para utilizarlo dentro del que estés usando.
+				En informática, inyección de dependencias (en inglés Dependency Injection, DI) es un patrón de diseño orientado a objetos, 
+				    en el que se suministran objetos a una clase en lugar de ser la propia clase la que cree dichos objetos. Esos objetos 
+				    cumplen contratos que necesitan nuestras clases para poder funcionar (de ahí el concepto de dependencia). Nuestras clases 
+				    no crean los objetos que necesitan, sino que se los suministra otra clase 'contenedora' que inyectará la implementación 
+				    deseada a nuestro contrato.
 			    </p>
 				<br><br>
+			    
+			    <br>
+					    <img src="../../../Contenido/Grupo2/Imagenes/in.jpg" alt="" align="center">
+				    <br><br>
+			    
+			    <br>
+					    <img src="../../../Contenido/Grupo2/Imagenes/iny.jpg" alt="" align="center">
+				    <br><br>
 
-			    <h2>¿Para qué sirve VirtualBox?</h2>
+			    <h2>Ventajas de Utilizar Inyección de Dependencias</h2>
 			    <p>
-				VirtualBox sirve principalmente para virtualizar sistemas operativos que no podamos o no queramos ejecutar de forma nativa en 
-				nuestro equipo. Esto servirá también para trabajar sobre esos sistemas operativos con un relativamente amplio abanico de posibilidades, 
-				pues una de las principales virtudes de una máquina virtual es el aislamiento que ello proporciona.
-				Gracias a este aislamiento propio de las máquinas virtuales, podemos crear por ejemplo un Sandbox, algo sobre lo que ya hemos hablado 
-				anteriormente y hemos explicado paso a paso como hacer, y que consiste principalmente en un espacio de ejecución aislado donde podemos 
-				ejecutar aplicaciones de fuentes sin verificar o sospechosas, de forma que, a través de una serie de regulaciones estrictas, podemos 
-				ejecutar aplicaciones susceptibles de contener malware u otro tipo de código malicioso que pueda dañar nuestro equipo.
+				•	Flexible
+					– No hay necesidad de tener un código de búsqueda en la lógica de negocio.
+					–Elimina el acoplamiento entre módulos
+				•	Testeable
+					– No se necesita un espacio específico de testeo
+					–Testeo automático como parte de las construcciones
+				•	Mantenible
+					– Permite la reutilización en diferentes entornos de aplicaciones modificando los archivos de configuración en lugar del código.
+					– Promueve un enfoque coherente en todos aplicaciones y equipos
+
 			    </p>
 				<br><br>
-			    <h2>VirtualBox soporta la virtualización de los siguientes sistemas operativos:</h2>
-			    <p>
-				 <ul>
-					<li><p>• Microsoft Windows</li>
-					<li><p>• GNU/Linux</li></p>
-					<li><p>• Mac OS X</li>
-			    		<li><p>• OS/2 Warp</li>
-			    		<li><p>• Solaris/OpenSolaris</li>
-			    		<li><p>• FreeBSD</li>
-			    		<li><p>• MS-DOS</li>
-			    		<li><p>• Android</li>
-			    		<li><p>• etc.</li>
-				</ul>
+			    <h2>Ejemplo</h2>
+			    <p>Imagínese que usted como piloto de avión comercial, cada vez que tenga pilotear tuviera que llenar el tanque de combustible, preparar la pista, 
+			       verificar que todo está listo para el despegue, sabemos que no es humanamente posible, por eso existen distintas personas trabajan en conjunto 
+			       para que sea posible el despegue.
 			    </p>
+			    
+			    <br>
+					    <img src="../../../Contenido/Grupo2/Imagenes/inyejemplo.jpg" alt="" align="center">
+				    <br><br>
+			    
+			     <iframe width="500" height="300" src="Contenido/Grupo2/Presentaciones/Curso de Patrones de diseño - 14 Inyección de dependencias_480p.mp4" frameborder="0" allow="accelerometer; 
+		        	clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  	<br> </br>
+		  		<br> </br>
 
-			    <h2>Requisitos</h2>
-			    <p>
-				<ul>
-					<li><p>1. Procesador o SoC de 1 GHz o superior.</li>
-					<li><p>2. Memoria RAM: 1 GB para 32 bits o 2 GB para 64 bits.</li></p>
-					<li><p>3. Espacio en disco duro: 16GB para el sistema operativo 32 bits o 20 GB para el de 64 bits.</li>
-			    		<li><p>4. Tarjetas gráficas soporten DirectX 9 o controlador WDDM 1.0.</li>
-			    		<li><p>5. Resolución de pantalla 800 x 600.</li>
-				</ul>
-			    </p>
-
-			    <h2>Instalar Virtualbox en Windows 10</h2>
-			    <p>El proceso de instalación es muy sencillo y no varía en nada a los típicos next, next, next cuando instalamos una aplicación en Windows. 
-			       Sitúa el archivo de instalación que descargaste en el paso anterior y ejecútalo, de inmediato comenzará el proceso de instalación y en 
-			       esta primera ventana haz click sobre Next.</p>
-		    		<br><br>
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup.jpg" alt="" align="center">
-				    <br><br>
-		    
-				<p>En la siguiente ventana verás la información de lo que se va instalar, la recomendación es dejar todo tal cual esta y hacer click sobre Next.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup2.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>Ahora te dirá que va a crear los accesos directos en el menú de inicio, en el escritorio, en la barra de inicio rápido y registrará la asociación 
-				de archivos. Puedes desmarcar las opciones de crear iconos que desees pero no desmarques la última opción.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup3.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>En la siguiente ventana te saldrá una “advertencia” que dirá que la función de red restablecerá su conexión de red y lo desconectará temporalmente 
-				de la misma.
-				Esto es debido a que Virtualbox instalará una conexión de red que posteriormente usará el sistema operativo virtualizado. Así que puedes proceder a 
-				hacer click en Yes.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup4.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>En la siguiente ventana haz click en Install para proceder ahora sí, con la instalación de Virtualbox en tu computadora.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup5.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>A continuación te saldrá el progreso de instalación.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup6.jpg" alt="" align="center">
-				    <br><br>
-				
-				<p>En el proceso de instalación te saldrá una ventana donde te informa que se instalará un controlador de bus, este es necesario para que el sistema 
-				operativo virtualizado pueda conectarse por ejemplo con los puertos USB de tu computadora, por lo tanto debes hacer click en Instalar.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup7.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>Por último te saldrá una ventana en donde te confirma que Virtualbox se instaló sin problemas en tu computadora, deja seleccionada la opción marcada 
-				para que se ejecute de inmediato Virtualbox y haz click en Finish.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup8.jpg" alt="" align="center">
-				    <br><br>
-				    
-				<p>Una vez finalizada la instalación, iniciar la aplicación para comenzar con la configuración de un máquina virtual, en este punto lo primero que haremos 
-				sera instalar el paquete Extension Pack, así que sigamos adelante con esta guía paso a paso.</p>
-				    
-				    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/VBsetup9.jpg" alt="" align="center">
-				    <br><br>
-		    
-		    		<p><a rel="nofollow" href="https://www.youtube.com/watch?v=3QfADstHqhc">VIDEO: Cómo instalar una máquina virtual con Virtual Box</a></p>
-
-			  </p>
 			    <h2>BIBLIOGRAFIA</h2>
 			    <p>
 				<ul>
-					<li><p>Dash, P. (2013). Getting started with Oracle VM VirtualBox. Birmingham: Packt Pub./</li>
-					<li><p>Oracle VM VirtualBox. (2020). Retrieved 17 November 2020, from <a rel="nofollow" href="https://www.virtualbox.org/">
-						https://www.virtualbox.org/</a></li>
-					<li><p>VirtualBox VM – Instalar un Sistema Operativo virtual. (2020). Retrieved 17 November 2020, 
-					       from <a rel="nofollow" href="https://darkbyteblog.wordpress.com/2011/05/14/virtualbox-vm-instalar-un-sistema-operativo-virtual/">
-						https://darkbyteblog.wordpress.com/2011/05/14/virtualbox-vm-instalar-un-sistema-operativo-virtual/</a></li>
-					<li><p>VirtualBox: ¿Qué es y para qué sirve? [Noviembre 2020]. (2020). Retrieved 17 November 2020, 
-					       from <a rel="nofollow" href="https://www.geeknetic.es/VirtualBox/que-es-y-para-que-sirve">
-						https://www.geeknetic.es/VirtualBox/que-es-y-para-que-sirve</a></li>
+					<li><p>href="http://www.tss.com.pe/blog/que-es-la-inyeccion-de-dependencias-para-que-sirve-y-que-significan-los-tiempos-de-vida-en-su-implementacion">
+					http://www.tss.com.pe/blog/que-es-la-inyeccion-de-dependencias-para-que-sirve-y-que-significan-los-tiempos-de-vida-en-su-implementacion/</a></li>
+					<li><p><a rel="nofollow" href="https://desarrolloweb.com/articulos/patron-diseno-contenedor-dependencias.html">
+						https://desarrolloweb.com/articulos/patron-diseno-contenedor-dependencias.html</a></li>
+					<li><p><a rel="nofollow" href="https://www.arquitecturajava.com/el-patron-de-inyeccion-de-dependencia/">
+						https://www.arquitecturajava.com/el-patron-de-inyeccion-de-dependencia/</a></li>
 				</ul>
 			    </p>			   
         	    </div>                 
