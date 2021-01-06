@@ -84,29 +84,30 @@ https://templatemo.com/tm-529-ramayana
 			    </p>
 				<br><br>
 			    <h2>Tipos de expresiones en THYMELEAF</h2>
-			    <p>•	Expresiones variables
-					${sesión.usuario.nombre} Podemos usar la notación de puntos para acceder a las propiedades de un objeto.
-			       •	Expresiones de selección
+			    <p><li>•	Expresiones variables
+					${sesión.usuario.nombre} 
+				    	Podemos usar la notación de puntos para acceder a las propiedades de un objeto.</li>
+			       <li>•	Expresiones de selección
 					Son expresiones que nos permiten reducir la longitud de la expresión si prefijamos un objeto mediante una expresión variable
 					<div th:object=${book}”> 
 					… 
 					<span th:text=”*{title}”>…</span>
 					 … 
-					</div>
-				•	Expresiones de mensaje
+					</div></li>
+				<li>•	Expresiones de mensaje
 					Que nos permiten, a partir de ficheros properties o ficheros de texto, cargar los mensajes e incluso realizar la internalización de nuestras aplicaciones
 					Escribir mensaje en messages.properties
 						welcome.message=Hello, {0}!
 					Reemplace {0} con el nombre de usuario dentro de la etiqueta thymeleaf
-						<h3 th:text="#{welcome.message(${some.variable})}">Hello, Placeholder</h3>
+						<h3 th:text="#{welcome.message(${some.variable})}">Hello, Placeholder</h3></li>
 
-				•	Expresiones de enlace
+				<li>•	Expresiones de enlace
 					Nos permiten crear URL que pueden tener parámetros o variables
 					<a th:href=”@{/order/list}”>…</a>
-					 <a href=”{/myapp/order/list}”>…</a>
-				•	Expresiones de fragmentos
+					 <a href=”{/myapp/order/list}”>…</a></li>
+				<li>•	Expresiones de fragmentos
 					Nos van a permitir dividir nuestras plantillas en plantillas más pequeñas e ir cargándolas según las vayamos necesitando
-					<footer th:fragment="pie" class="bg-dark"> <span class="info-copyrigth"><a href="https://programadoointentandolo.com">programadoointentandolo.com</a> © 2018</span> </footer>
+					<footer th:fragment="pie" class="bg-dark"> <span class="info-copyrigth"><a href="https://programadoointentandolo.com">programadoointentandolo.com</a> © 2018</span> </footer></li>
 
 			    </p>
 
