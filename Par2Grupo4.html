@@ -58,7 +58,7 @@ https://templatemo.com/tm-529-ramayana
 			    , en adelante RDBMS (Relational Database Management System), sobre una estructura lógica de entidades con el objeto de simplificar y 
 			    acelerar el desarrollo de nuestras aplicaciones.
 			    
-			    <img src="Contenido/Grupo 4/IMAGENES/ORM2.jpg" width="80" height="300"> 
+			    <img src="Contenido/Grupo 4/IMAGENES/ORM2.jpg" width="50" height="270"> 
 		    </p>
                   </div>
                 </div>
@@ -70,13 +70,12 @@ https://templatemo.com/tm-529-ramayana
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-md-12">
-                    <img src="assets/images/js1.jpg" >
                     <div class="down-content">
                       <p><strong>¿Por qué usar ORM?</strong></p>
 			<p>Aunque el lenguaje SQL se usa para acceder a muchas de las bases de datos existentes, existen múltiples varianzas en las funciones
 				que los distintos SGBD han usado. Un ejemplo muy sencillo sería delimitar el número de registros de una consulta:</p>
 			    <br>
-			    <img src="Contenido/Grupo 4/IMAGENES/ORM.jpg" width="80" height="300"> 
+			    <img src="Contenido/Grupo 4/IMAGENES/ORM.jpg" width="50" height="270"> 
 			<br>
 			<p>Tres de las bases de datos más importantes, y como veis, para algo tan fácil vemos diferencias. Esto para el programador supone 
 				tener que conocer el lenguaje para cada Base de datos, y más importante aún, si en un futuro se desea migrar la aplicación, 
@@ -109,9 +108,65 @@ https://templatemo.com/tm-529-ramayana
 			    <li>Java => Hibernate, iBatis, Ebean, etc..</li>
 			    <li>.NET=> Entity Framework, nHibernate, etc..</li>
 			    <li>PHP=> Doctrine, Propel, ROcks, Torpor, etc..</li
-			    
-		      
+				    
+			<h1>JPA</h1>
+			    <p><strong>Que es: </strong> 
+				    <br>
+				    JPA es la propuesta estándar que ofrece Java para implementar un Framework Object Relational Mapping (ORM), que permite interactuar con la base de datos por medio
+				    de objetos, de esta forma, JPA es el encargado de convertir los objetos Java en instrucciones para el Manejador de Base de Datos (MDB).
+				    <br>
+				    Una de las cosas más importantes para comprender que es JPA es entender que JPA es una especificación y no un Framework como tal, ¿pero quiere decir esto exactamente?
+				    , pues bien, una especificación no es más que un documento en el cual se plasman las reglas que debe de cumplir cualquier proveedor que dese desarrollar una 
+				    implementación de JPA, de tal forma que cualquier persona puede tomar la especificación y desarrollar su propia implementación de JPA, ¿Esto quiere decir que 
+				    pueden existir muchas implementaciones de JPA? la respuesta es sí, de echo en la actualidad existen varios proveedor como lo son los siguientes:
+				    <br>
+				    	<li>Hibernate</li>
+			    		<li>ObjectDB</li>
+				    	<li>TopLink</li>
+				   	<li>EclipseLink</li>
+				    	<li>OpenJPA</li>
+				    
+				    <p>
+        				Dentro de las implementaciones más utilizadas están Hibernate, EclipseLink & TopLink, las dos primeras son las más utilizadas en el mundo open source y TopLink 
+					    es muy utilizada en desarrollos y productos relacionados con Oracle. Antes de preguntarnos cuál es la diferencia entre todas estas implementaciones tenemos 
+					    que comprender que en teoría todas debería de ofrecer la misma funcionalidad y el mismo comportamiento, lo que nos permitiría migrar entre una implementación 
+					    a otra sin afectar en nada nuestra aplicacion.
+    					</p>
+			  		<br>
+    					<p>
+        				Desde luego esto es solo teoría, ya que en la actualidad no todas las implementaciones implementan al 100% la especificación de JPA, además en escenario muy concretos 
+						puede que se comporten ligeramente diferente, por lo que puede requerir realizar algunos ajustes antes de migrar correctamente de proveedor.
+    					</p>
+			  		<p><strong>Entidades </strong></p>
+					    <br>
+					    <p>
+						Una entidad de persistencia (entity) es una clase de Java ligera, cuyo estado es persistido de manera asociada a una tabla en una base de datos relacional.
+						    Las instancias de estas entidades corresponden a un registro (conjunto de datos representados en una fila) en la tabla. Normalmente las entidades están 
+						    relacionadas con otras entidades, y estas relaciones son expresadas a través de metadatos objeto/relacional. Los metadatos del objeto/relacional pueden 
+						    ser especificados directamente en el fichero de la clase, usando las anotaciones de Java (annotations), o en un documento descriptivo XML, el cual es 
+						    distribuido junto con la aplicación.
+					    </p>
+					    <h3><strong>Relaciones entre entidades y ORM</strong></h3>
+					    <br>
+					    <p>
+						En JPA también es posible definir relaciones entre entidades, similares a las relaciones entre tablas en el modelo relacional. Así, una entidad puede estar 
+						    relacionada con una o muchas otras entidades, definiendo relaciones uno-a-uno, uno-a-muchos o muchos-a-muchos. Estas relaciones se definen en JPA por 
+						    medio de variables de instancia de las entidades y de métodos getters y setters que las actualizan. Por ejemplo, una propiedad de una entidad Reserva 
+						    será el Vuelo sobre el que se ha hecho la reserva. Las instancias de Reserva tendrán asociadas instancias de Vuelo a las que podremos acceder fácilmente 
+						    con un método como getVuelo. De esta forma, podremos obtener la(s) instancia(s) asociadas con una instancia dada llamando a un método de la entidad, 
+						    sin tener que realizar ninguna consulta SQL. Esta es una de las ventajas fundamentales de JPA: es posible hacer de forma programativa (llamando a métodos 
+						    definidos en las entidades) lo que en el modelo relacional sólo se puede hacer mediante consultas SQL.
+					    </p>
+			  			<img src="Contenido/Grupo 4/IMAGENES/ORM.jpg" width="50" height="270"> 
+			  			<br>
+				    
+
+
+
+				    <img src="Contenido/Grupo 4/IMAGENES/ORM2.jpg" width="80" height="300"> 
+			    </p>
                      <div>    
+			    
 			
 		      
                     </div>
