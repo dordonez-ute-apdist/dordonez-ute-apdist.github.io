@@ -48,8 +48,12 @@ https://templatemo.com/tm-529-ramayana
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-md-12">
-                    <h1>Java Streams</h1>
-                    <p><strong>Java Streams</strong> Las Java Streams son lo que técnicamente, en programación funcional, se llama mónadas, que puesto de manera simple, son un tipo de objeto que contiene una serie de datos y que puede ser combinado en un flujo de procesamiento tipo pipeline: los datos pasan por una serie de procesos que piden transformarlos en cada paso, emitiendo nuevos datos, hasta lograr un dato o serie de datos final.</p>
+                    <h1>ORM</h1>
+                    <p><strong>Que es: </strong> 
+			    Object-Relational mapping, o lo que es lo mismo, mapeo de objeto-relacional, es un modelo de programación que consiste en la
+			    transformación de las tablas de una base de datos, en una serie de entidades que simplifiquen las tareas básicas de acceso a los
+			    datos para el programador.
+		    </p>
                   </div>
                 </div>
               </div>
@@ -62,30 +66,35 @@ https://templatemo.com/tm-529-ramayana
                   <div class="col-md-12">
                     <img src="assets/images/js1.jpg" >
                     <div class="down-content">
-			    <br></br>
-			    <p>Un Stream, entonces, generalmente contiene una serie de elementos, que puede generarse, por ejemplo, a partir de una colección:</p>
-			    <ul>
-  				<li>Los Stream tienen operaciones intermedias, que devuelven una nueva Stream transformada, que se puede seguir encadenando, pero que solo se ejecutan cuando en el pipeline existe una operación terminal</li>
-  				<li>Las Stream pueden ser seriales o paralelas. Aquellas seriales se procesaran en un solo hilo, y aquellas paralelas se procesaran en varios hilos, de manera automática, gracias al uso de ForkJoinPool del sistema. </li>
- 				 
-			   </ul>
-			<div> </div>   
-			<img src="assets/images/js2.jpg" width="80" height="300">    
-			   <br></br>
-                      <p><strong>Operaciones Intermedias y Terminales:</strong></p>
-			<p>Las operaciones intermedias son aquellas que devuelven un Stream transformada y las terminales cierran el pipeline. </p>
-                     <div>  </div>  
-			<img src="assets/images/js3.jpg" width="100" height="300" >  
-			<br></br>
-		      <p><strong>Nota:</strong></p>
-		      <ul>
- 			 <li>Filter(P) (Operación Intermedia)</li>
-  			<li>Map(F) (Operación Intermedia)</li>
-  			<li>ForEach(A) (Operación Terminal)</li>
- 			 <li>Sorted() (Operación Intermedia)</li>
-			 <li>Reduce(I, O) (Operación Terminal)</li>
-			 <li>Collect(C) (Operación Terminal)</li>
-			</ul>
+                      <p>¿Por qué usar ORM?</strong></p>
+			<p>Aunque el lenguaje SQL se usa para acceder a muchas de las bases de datos existentes, existen múltiples varianzas en las funciones
+				que los distintos SGBD han usado. Un ejemplo muy sencillo sería delimitar el número de registros de una consulta:</p>
+			<br>
+			<p>Tres de las bases de datos más importantes, y como veis, para algo tan fácil vemos diferencias. Esto para el programador supone 
+				tener que conocer el lenguaje para cada Base de datos, y más importante aún, si en un futuro se desea migrar la aplicación, 
+				habría que reescribir gran número de las consultas.</p>
+			<br>
+			<p>
+				Esto el ORM al tener un capa intermedia, abstrae al programador de la base de datos y le centra en el desarrollo de la aplicación.
+				
+				<br>
+				
+				Otro punto importante es la facilidad de trabajo, un ORM, nos facilita las labores básicas de cualquier acceso a datos , el CRUD 
+				(Create, Read, Update y Delete). 
+				Realizando todas estas labores a través de un lenguaje de alto nivel orientado a objetos. 
+				Ahora que ya sabemos que es un ORM y porque usarlo, vamos a ver sus ventajas y desventajas.
+			</p>
+			
+			<p>¿Por qué usar ORM?</strong></p>
+		    
+			    <li>Facilidad y velocidad de uso</li>
+			    <li>Abstraccion de la base de datos usada</li>
+			    <li>Seguridad de la capa de acceso a datos contra ataques.</li>
+			    
+		      <img src="assets/images/js2.jpg" width="80" height="300"> 
+                     <div>    
+			
+		      
                     </div>
                   </div>
                 </div>
@@ -126,10 +135,11 @@ https://templatemo.com/tm-529-ramayana
 		       <li>
                   <span class="opener">PARCIAL 2</span>
                   <ul>
-                    <li><a href="#">TEMA #1</a></li>
+                    <li><a href="Par2Grup3.html">TEMA #1 Virtualizacion & Contenedorizacion </a></li>
                     <li><a href="#">TEMA #2</a></li>
-                    <li><a href="#">TEMA #3</a></li>
-                    <li><a href="#">TEMA #4</a></li>
+                    <li><a href="Par3Grup1SPRINGWEB.html">TEMA #3 Spring Web y MVC</a></li>
+                    <li><a href="Par2Grupo4.html">TEMA #4: Spring BDD </a></li>
+		    <li><a href="Par2Grup3Tm5.html">TEMA #5 Plantillas web Spring</a></li>
                   </ul>
                 </li>
 		      
