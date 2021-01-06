@@ -61,64 +61,59 @@ https://templatemo.com/tm-529-ramayana
                   <div class="col-md-12">
                     <div class="service-item first-item">
          		
-			   <h1>Inyección de dependencias</h>
-			    <h2>Definición</h2>
+			   <h1>Thymeleaf</h>
+			    <h2>¿Qué es THYMELEAF?</h2>
 			    <p>
-				En informática, inyección de dependencias (en inglés Dependency Injection, DI) es un patrón de diseño orientado a objetos, 
-				    en el que se suministran objetos a una clase en lugar de ser la propia clase la que cree dichos objetos. Esos objetos 
-				    cumplen contratos que necesitan nuestras clases para poder funcionar (de ahí el concepto de dependencia). Nuestras clases 
-				    no crean los objetos que necesitan, sino que se los suministra otra clase 'contenedora' que inyectará la implementación 
-				    deseada a nuestro contrato.
-			    </p>
-				<br><br>
-			    
-			    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/in.jpg" alt="" align="center">
-				    <br><br>
-			    
-			    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/iny.jpg" alt="" align="center">
-				    <br><br>
-
-			    <h2>Ventajas de Utilizar Inyección de Dependencias</h2>
-			    <p>
-				•	Flexible
-					– No hay necesidad de tener un código de búsqueda en la lógica de negocio.
-					–Elimina el acoplamiento entre módulos
-				•	Testeable
-					– No se necesita un espacio específico de testeo
-					–Testeo automático como parte de las construcciones
-				•	Mantenible
-					– Permite la reutilización en diferentes entornos de aplicaciones modificando los archivos de configuración en lugar del código.
-					– Promueve un enfoque coherente en todos aplicaciones y equipos
+				Thymeleaf es una biblioteca Java que implementa un motor de plantillas de XML/XHTML/HTML5, que puede ser utilizado tanto en modo web 
+				como en otros entornos no web.
+				Se acopla muy bien para trabajar en la capa vista del modelo vista controlador (MVC) de aplicaciones web
+				Proporciona un módulo opcional para la integración con Spring MVC, por lo que se puede utilizar para reemplazar completamente 
+				a los archivos JSP en tus aplicaciones construidas con esta tecnología.
 
 			    </p>
 				<br><br>
-			    <h2>Ejemplo</h2>
-			    <p>Imagínese que usted como piloto de avión comercial, cada vez que tenga pilotear tuviera que llenar el tanque de combustible, preparar la pista, 
-			       verificar que todo está listo para el despegue, sabemos que no es humanamente posible, por eso existen distintas personas trabajan en conjunto 
-			       para que sea posible el despegue.
+			    <h2>Características de THYMELEAF</h2>
+			    <p>
+				•	Permite la creación de plantillas de una manera elegante y un código bien formateado.
+				•	Motor de plantillas Java para XML, XHTML y HTML5. Extensible para otros formatos.
+				•	Trabaja en entornos web y no web (desconectados).
+				•	Configurable, alto rendimiento del caché del analizador de plantillas que reduce al mínimo las entradas/salidas.
+				•	Traducción automática DOCTYPE 
+
+
 			    </p>
-			    
-			    <br>
-					    <img src="../../../Contenido/Grupo2/Imagenes/inyejemplo.jpg" alt="" align="center">
-				    <br><br>
-			    
-			     <h1>VIDEO</h1>
-		       		<iframe width="800" height="500" src="../../../Contenido/Grupo2/Presentaciones/Curso de Patrones de diseño - 14 Inyección de dependencias_480p.mp4" frameborder="0" allow="accelerometer; 
-		       		; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			  		<br> </br>
-		  			<br> </br>
+				<br><br>
+			    <h2>Tipos de expresiones en THYMELEAF</h2>
+			    <p>•	Expresiones variables
+					${sesión.usuario.nombre} Podemos usar la notación de puntos para acceder a las propiedades de un objeto.
+			       •	Expresiones de selección
+					Son expresiones que nos permiten reducir la longitud de la expresión si prefijamos un objeto mediante una expresión variable
+					<div th:object=${book}”> 
+					… 
+					<span th:text=”*{title}”>…</span>
+					 … 
+					</div>
+				•	Expresiones de mensaje
+					Que nos permiten, a partir de ficheros properties o ficheros de texto, cargar los mensajes e incluso realizar la internalización de nuestras aplicaciones
+					Escribir mensaje en messages.properties
+						welcome.message=Hello, {0}!
+					Reemplace {0} con el nombre de usuario dentro de la etiqueta thymeleaf
+						<h3 th:text="#{welcome.message(${some.variable})}">Hello, Placeholder</h3>
+
+				•	Expresiones de enlace
+					Nos permiten crear URL que pueden tener parámetros o variables
+					<a th:href=”@{/order/list}”>…</a>
+					 <a href=”{/myapp/order/list}”>…</a>
+				•	Expresiones de fragmentos
+					Nos van a permitir dividir nuestras plantillas en plantillas más pequeñas e ir cargándolas según las vayamos necesitando
+					<footer th:fragment="pie" class="bg-dark"> <span class="info-copyrigth"><a href="https://programadoointentandolo.com">programadoointentandolo.com</a> © 2018</span> </footer>
+
+			    </p>
 
 			    <h2>BIBLIOGRAFIA</h2>
 			    <p>
 				<ul>
-					<li><p><a rel="nofollow" href="http://www.tss.com.pe/blog/que-es-la-inyeccion-de-dependencias-para-que-sirve-y-que-significan-los-tiempos-de-vida-en-su-implementacion">
-					http://www.tss.com.pe/blog/que-es-la-inyeccion-de-dependencias-para-que-sirve-y-que-significan-los-tiempos-de-vida-en-su-implementacion/</a></li>
-					<li><p><a rel="nofollow" href="https://desarrolloweb.com/articulos/patron-diseno-contenedor-dependencias.html">
-						https://desarrolloweb.com/articulos/patron-diseno-contenedor-dependencias.html</a></li>
-					<li><p><a rel="nofollow" href="https://www.arquitecturajava.com/el-patron-de-inyeccion-de-dependencia/">
-						https://www.arquitecturajava.com/el-patron-de-inyeccion-de-dependencia/</a></li>
+					<li><p><a rel="nofollow" href="https://www.thymeleaf.org//">https://www.thymeleaf.org/</a></li>
 				</ul>
 			    </p>			   
         	    </div>                 
