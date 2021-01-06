@@ -84,28 +84,28 @@ https://templatemo.com/tm-529-ramayana
 			    </p>
 				<br><br>
 			    <h2>Tipos de expresiones en THYMELEAF</h2>
-			    <p><li>•	Expresiones variables
+			    <p><li>	Expresiones variables</a></li>
 					${sesión.usuario.nombre} 
 				    	Podemos usar la notación de puntos para acceder a las propiedades de un objeto.</li>
-			       <li>•	Expresiones de selección
+				    <li><a>	Expresiones de selección</a></li>
 					Son expresiones que nos permiten reducir la longitud de la expresión si prefijamos un objeto mediante una expresión variable
 					<div th:object=${book}”> 
 					… 
 					<span th:text=”*{title}”>…</span>
 					 … 
 					</div></li>
-				<li>•	Expresiones de mensaje
+				<li><a>	Expresiones de mensaje</a></li>
 					Que nos permiten, a partir de ficheros properties o ficheros de texto, cargar los mensajes e incluso realizar la internalización de nuestras aplicaciones
 					Escribir mensaje en messages.properties
 						welcome.message=Hello, {0}!
 					Reemplace {0} con el nombre de usuario dentro de la etiqueta thymeleaf
 						<h3 th:text="#{welcome.message(${some.variable})}">Hello, Placeholder</h3></li>
 
-				<li>•	Expresiones de enlace
+				<li><a>	Expresiones de enlace</a></li>
 					Nos permiten crear URL que pueden tener parámetros o variables
 					<a th:href=”@{/order/list}”>…</a>
 					 <a href=”{/myapp/order/list}”>…</a></li>
-				<li>•	Expresiones de fragmentos
+				<li><a>	Expresiones de fragmentos</a></li>
 					Nos van a permitir dividir nuestras plantillas en plantillas más pequeñas e ir cargándolas según las vayamos necesitando
 					<footer th:fragment="pie" class="bg-dark"> <span class="info-copyrigth"><a href="https://programadoointentandolo.com">programadoointentandolo.com</a> © 2018</span> </footer></li>
 
