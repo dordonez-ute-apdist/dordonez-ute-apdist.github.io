@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Aplicaciones Distribuidas 7mo D</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" >
+				<h1><a href="index.html">Aplicaciones Distribuidas 7mo D</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Temas</a>
+							<ul>
+								<li>
+									<a href="#">Parcial Uno</a>
+									<ul>
+										<li><a href="HilosSincronizacion.html">Hilos y Sincronización</a></li>
+										<li><a href="ForkJoin.html">Fork Join</a></li>
+										<li><a href="StreamParalelas.html">Streams Paralelas</a></li>
+										<li><a href="JavaStreams.html">Java Streams</a></li>
+										<li><a href="TcpIp_Sockets.html">TCP/IP Sockets UDP</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Dos</a>
+									<ul >
+										<li><a href="RPC_RMI.html">RPC y RMI</a></li>
+										<li><a href="VirtualizacionContenedores.html">Virtualización y Cont</a></li>
+										<li><a href="SpringySpringBoot.html">Spring y SpringBoot</a></li>
+										<li><a href="SpringWebMVC.html">Spring Web MVC</a></li>
+										<li><a href="SpringBDD.html">Spring BDD</a></li>
+										<li><a href="PlantWebSpring.html">Plantillas Web Spring</a></li>
+										<li><a href="ServWebJMS.html">Servicios Web JMS</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Tres</a>
+									<ul>
+										<li><a href="SistDistArchivos.html">Sistemas Dist de Archivos</a></li>
+										<li><a href="Hadoop.html">Hadoop</a></li>
+										<li><a href="Spark.html">Spark</a></li>
+										<li><a href="MPI_ZeroMQ_NNG.html">MPI, ZeroMQ, NNG</a></li>
+										
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Consultas</a>
+							<ul>
+								<li>
+									<a href="#">Parcial Uno</a>
+									<ul>
+										<li><a href="../Consultas/MapReduce.html">Map Reduce</a></li>
+										<li><a href="../Consultas/ForkJoin.html">Fork Join</a></li>
+										<li><a href="../Consultas/MetodosPorDefecto.html">Metodos por Defecto</a></li>
+										<li><a href="../Consultas/ExpLambda.html">Expresión Lambda</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Dos</a>
+									<ul>
+										<li><a href="../Consultas/MaquinaVirtual.html">Maquina Virtual</a></li>
+										<li><a href="../Consultas/VirtualBox.html">Virtual Box</a></li>
+										<li><a href="../Consultas/Contenedores.html">Contenedores</a></li>
+										<li><a href="../Consultas/Docker.html">Docker</a></li>
+										<li><a href="../Consultas/InversionControl.html">Inversión de Control</a></li>
+										<li><a href="../Consultas/InyeccionDependencias.html">Inyección Dependencia</a></li>
+										<li><a href="../Consultas/ConvencionConfig.html">Convencion Config</a></li>
+										<li><a href="../Consultas/MVC.html">MVC</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Tres</a>
+									<ul>
+										<li><a href="../Consultas/JSP.html">JSP</a></li>
+										<li><a href="../Consultas/Thymeleaf.html">Thymeleaf</a></li>
+										<li><a href="../Consultas/FreeMarker.html">Freemarker</a></li>
+										<li><a href="../Consultas/Groovy.html">Groovy</a></li>																				
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- <li><a href="#" class="button">Sign Up</a></li> -->
+					</ul>
+				</nav>
+			</header>
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>Hilos y Sincronización</h2>
+						<!-- <p>A generic page for every non-generic situation.</p>Main -->
+					</header>
+					<div class="box">
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+						<h3>Paralelismo e Hilos en Java</h3>
+							<p  align="justify">El paralelismo es la ejecución simultánea de dos o más tareas. Se considera una propiedad del hardware, 
+								ya que requiere recursos físicos para ejecutar cada tarea simultáneamente, y su objetivo se basa en realizar una tarea en el menor tiempo posible.
+							</p>
+								<p align="justify"> El paralelismo acelera la ejecución de una tarea dividiéndola en computaciones independientes y ejecutándola sobre hardware capaz de realizar computaciones simultáneas, 
+									como por ejemplo un procesador con varios núcleos. Pero cuando ejecutamos una tarea paralelizada en múltiples ordenadores, en vez de en los múltiples cores de un solo ordenador, 
+									decimos que la computación paralela es distribuída. Por ejemplo, cada búsqueda en Google se ejecuta simultáneamente en cientos de ordenadores,
+									cada uno de los cuales busca al mismo tiempo en un subconjunto del índice del web.
+								</p>
+									<div align="center"><img src="IMAGENES_GRUPO/GRUPO 1/paralelismo.png"
+										width="700"
+										height="400">
+									</div>
+
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>¿Qué son los hilos?</h3>
+								<p align="justify">Un hilo es un flujo de control dentro de un programa. Creando varios hilos podremos realizar varias tareas simultáneamente. 
+									Cada hilo tendrá sólo un contexto de ejecución (contador de programa, pila de ejecución).
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Creacion de Hilos</h3>
+								<p align="justify">En Java los hilos están encapsulados en la clase Thread. Para crear un hilo tenemos dos posibilidades:
+									Heredar de Thread redefiniendo el método run().
+									Crear una clase que implemente la interfaz Runnable que nos obliga a definir el método run().
+													
+									En ambos casos debemos definir un método run() que será el que contenga el código del hilo. Desde dentro de este método podremos llamar a cualquier otro método de cualquier objeto, 
+									pero este método run() será el método que se invoque cuando iniciemos la ejecución de un hilo. El hilo terminará su ejecución cuando termine de ejecutarse este método run(). 
+									Para crear nuestro hilo mediante herencia haremos lo siguiente: 
+								</p>
+								<div align="center"><img src="IMAGENES_GRUPO/GRUPO 1/hilos.png"
+									width="700"
+									height="400">
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>Candado de uso exclusivo</h3>
+								<p align="justify">Cuando se utiliza la palabra clave synchronized se esta indicando una zona restringida para el uso de Threads, 
+									esta zona restringida para efectos prácticos puede ser considerada un candado (“lock”) sobre la instancia del objeto en cuestión.
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Candado</h3>
+								<p align="justify">Todos los objetos (incluidos los arrays) tienen un “candado” (lock). 
+									Solo un hilo puede tener bloqueado el candado de un objeto en un momento dado. 
+									Podrá bloquearlo más de una vez antes de liberarlo y solo quedará completamente libre cuando el hilo lo libere tantas veces como lo ha obtenido.  
+									Si  un hilo intenta obtener un candado ocupado, quedará suspendida hasta que éste se libere y pueda obtenerlo. No se puede acceder directamente a los candados..
+								</p>
+
+								<h3>Ejemplo de sincronizacion candado de uso exclusivo</h3>
+
+								<iframe width="600" height="300" src="https://www.youtube.com/embed/sHwFkximn2E" frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>Sincronizacion Java CandadoRW</h3>
+								<p align="justify">La mayoría de los elementos de java.util.concurrent no utilizan synchronized. Entonces, 
+									¿cómo logran ser seguros a hilos? Pues utilizan la nueva interfaz Lock, que tiene semántica similar a synchronized; 
+									pero ofrece alto desempeño y características adicionales, tales como la habilidad de interrumpir un hilo que está esperando por un bloqueo, 
+									esperar un bloqueo por un tiempo específico, preguntar por la disponibilidad de un bloqueo, etc.
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Ejemplo de sincronizacion candado RW</h3>
+								<iframe width="600" height="300" src="https://www.youtube.com/embed/hcfUP8cc03M" frameborder="0" allow="accelerometer; autoplay;
+									clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+								</iframe>
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+						<ul class="copyright">
+						<li>&copy; Aplicaciones Distribuidas. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
