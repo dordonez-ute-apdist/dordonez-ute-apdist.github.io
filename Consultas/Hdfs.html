@@ -102,21 +102,140 @@
 			<!-- Main -->
 				<section id="main" class="container">
 					<header>
-						<h2>Generic Consultas</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<h2>HDFS (Sistema de Archivos Distribuido de Hadoop) </h2>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<h3>Introduccion</h3>
+						<p>
+							El sistema de archivos distribuido de Hadoop ( HDFS ) es un sistema de archivos distribuido diseñado para 
+							ejecutarse en hardware básico. Tiene muchas similitudes con los sistemas de archivos distribuidos existentes.
+							<br>
+							<br>
+							Sin embargo, las diferencias con otros sistemas de archivos distribuidos son significativas. HDFS es altamente 
+							tolerante a fallas y está diseñado para implementarse en hardware de bajo costo. HDFS proporciona acceso de alto
+							rendimiento a los datos de la aplicación y es adecuado para aplicaciones que tienen grandes conjuntos de datos. 
+							HDFS se creó originalmente como infraestructura para el proyecto del motor de búsqueda web Apache Nutch. HDFS es 
+							ahora un subproyecto de Apache Hadoop. 
+							<br>
+						</p>
+
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Caracteristicas de HDFS</h3>
+								<br>
+								<li>Es adecuado para almacenamiento y procesamiento distribuidos.</li>
+								<li>Hadoop proporciona una interfaz de comandos para interactuar con HDFS.</li>
+								<li>Los servidores de nodo de nombre y nodo de data integrados ayudan a los usuarios a comprobar fácilmente el estado del cluster.</li>
+								<li>Acceso continuo al archivo de data del sistema.</li>
+								<li>HDFS proporciona permisos y autenticación de archivos.</li>
+								<li>HDFS, es un sistema de ficheros que está especialmente diseñado para funcionar bien cuando se almacenan archivos grandes, que posteriormente se leerán de forma secuencial.</li>
+								<li>HDFS no se comporta especialmente bien cuando lo que se pretende es realizar accesos aleatorios a los archivos, ni cuando estos se actualizan frecuentemente.</li>
+								<li>HDFS proporciona redundancia, es decir, almacena los ficheros varias veces y en varios equipos distintos, para evitar que si uno de ellos falla, los datos se pierdan. Esto además, permite que se pueda emplear hardware relativamente económico para desplegar Hadoop, puesto que el sistema es tolerante de fallos.</li>
+								<br>
+								<h3>Arquitectura HDFS</h3>
+								<br>
+								<p>HDFS sigue la arquitectura maestro-esclavo y incluye los siguientes componentes:</p>
+								<br>
+								<li>NameNode</li>
+								<p>
+									<br>
+									El namenode es el hardware base que contiene el sistema operativo GNU / Linux y el software namenode. Es un software que se puede ejecutar en hardware básico. El sistema con el namenode actúa como el servidor maestro y realiza las siguientes tareas: 
+									<br>
+									1. Administrar el espacio de nombres del sistema de archivos. 2. Regula el acceso del cliente a los archivos. 3. También ejecuta operaciones del sistema de archivos como cambiar el nombre, cerrar y abrir archivos y directorios. 
+									<br>
+								</p>
+								<li>DataNode</li>
+								<p>
+									<br>
+									Datanode es un hardware base que tiene un sistema operativo GNU / Linux y un software de nodo de data. Para cada nodo (hardware / sistema base) de un cluster, habrá un nodo de data. Estos nodos gestionan el almacenamiento de data de su sistema. 
+									<br>
+									1. Los nodos de data realizan operaciones de lectura y escritura en los sistemas de archivos según lo solicite el cliente. 
+									<br>
+									2. también realizan operaciones como crear, eliminar y replicar bloques según las instrucciones del namenode.  
+									<br>
+								</p>
+								<li>Bloques</li>
+								<p>
+									<br>
+									El primer concepto que hay que entender es que HDFS almacena los archivos como bloques, que es la unidad mínima que puede leer o escribir. Todos los ficheros están divididos en bloques, que por defecto tienen un tamaño de 128 MB.  
+									<br>
+									Además, no es necesario que todos los bloques de un fichero se almacenen en la misma máquina del clúster (de hecho, habitualmente esto no ocurrirá). Esto da lugar a dos ventajas a la hora de trabajar con ficheros grandes:
+									<br>
+									<br>
+									<li>Se pueden escribir ficheros que sean mayores que la capacidad de almacenamiento de cada una de las máquinas por separado.</li> 
+									<li>Se puede leer un fichero de forma paralela, puesto que cada máquina puede leer un fragmento distinto al mismo tiempo. Este es uno de los principios fundamentales del paradigma de programación MapReduce.</li>
+									<br>
+								</p>
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Objetivos HDFS</h3>
+								<p>
+									Solución de problemas y recuperación: debido a que HDFS incluye una gran cantidad de hardware básico, las fallas de componentes son comunes. Por lo tanto, HDFS debe tener mecanismos de recuperación y detección de fallas rápidos y automáticos. 
+									<br>
+									<br>
+									Grandes conjuntos de data: HDFS debe tener cientos de nodos por cluster para manejar aplicaciones con grandes conjuntos de data. 
+									<br>
+									<br>
+									Hardware a data : una tarea solicitada se puede realizar de manera eficiente cuando el cálculo se realiza cerca de los data. Especialmente cuando se trata de grandes conjuntos de data, reduce el tráfico de red y aumenta el rendimiento. 
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Funcionamiento</h3>
+								<p>
+									HDFS tiene un modelo Write once read many. Significa que no se pueden editar ficheros almacenados HDFS, pero sí se pueden añadir datos. Antes de poder usar HDFS, debemos formatear el NameNode con el comando hdfs namenode -format.  
+									<br>
+									<br>
+									<li>En las operaciones de escritura: el cliente debe comunicar la instrucción previamente al NameNode. El NameNode comprueba los permisos y responde entonces al cliente con la dirección de los DataNodes en los que el cliente deberá empezar a escribir. El primer DataNode copiará el bloque a otro DataNode, que entonces lo copiará a un tercero. Una vez que se han completado estas réplicas se enviará al cliente la confirmación de escritura. </li>
+									<br>
+									<br>
+									<li>En las operaciones de lectura: el cliente pide al NameNode la localización de un fichero. Una vez que se han comprobado los permisos del cliente, el NameNode envía la localización de los DataNodes que contienen los bloques que componen el fichero al cliente. También envía un token de seguridad que usará en los DataNodes como autenticación. </li>
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Almacenamiento de Datos en HDFS</h3>
+								<p>
+									Hadoop proporciona una interfaz para leer y escribir en HDFS a través de comandos de consola. Estos comandos pueden ejecutarse en cualquier máquina que tenga instalada Hadoop, indistintamente de que sea máster o esclavo, siempre que ejecute el servicio de HDFS. El punto de partida principal para interactuar con HDFS es el comando hadoop fs. Ejecutando esta instrucción podemos ver en pantalla las diferentes operaciones que podemos realizar. Esta sección enumera algunas de las principales. 
+									<li>Listar Ficheros</li>
+									<p>
+										Se pueden listar ficheros y directorios en HDFS de forma similar a como se hace en Unix. 
+										Para ello, basta con ejecutar el siguiente comando: 
+										<br>
+										<br>
+										hadoop fs -ls 
+									</p>
+									<li>Crear Directorios</li>
+									<p>
+										Se pueden crear directorios en HDFS empleando el siguiente comando: 
+										<br>
+										<br>
+										hadoop fs -mkdir 
+										<br>
+										<br>
+										Este comando creará un nuevo directorio vacío en la ruta especificada, dentro del sistema de ficheros HDFS. 
+									</p>
+									<li>Copiar, mover y eliminar rutas en HDFS</li>
+									<p>
+										Al igual que en Unix, se pueden ejecutar comandos para copiar, mover y eliminar ficheros y directorios en HDFS. En concreto, se pueden emplear los siguientes comandos: 
+										<br>
+										<br>
+										hadoop fs -cp 
+										<br>
+										hadoop fs -mv 
+										<br>
+										hadoop fs -rm [-r] 
+										<br>
+										<br>
+										Los dos primeros comandos se encargan de copiar y mover respectivamente una ruta a otra distinta dentro del sistema de ficheros HDFS. El tercer comando permite borrar una o más rutas, pudiéndose indicar la opción –r para que se borren directorios de forma recursiva. 
+									</p>
+									<li>Otros comandos</li>
+									<p>
+										Hadoop soporta otros comandos que tienen como finalidad gestionar los permisos, comprobar el espacio ocupado por un directorio o el espacio disponible, etc. Todos ellos, así como los parámetros que acepta cada uno, se pueden consultar ejecutando el siguiente comando: 
+										<br>
+										<br>
+										hadoop fs -help
+									</p>
+								</p>
 							</div>
 						</div>
 					</div>
