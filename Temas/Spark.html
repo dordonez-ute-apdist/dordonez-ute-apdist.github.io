@@ -101,20 +101,37 @@
 				<section id="main" class="container">
 					<header>
 						<h2>SPARK</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<p></p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<h3>INTRODUCCION</h3>
+						<p>Es un framework de código abierto para el procesamiento de grandes volúmenes de datos
+							con el pensamiento de tener como características principales como son:</p>
+							<UL>Velocidad.</UL>
+							<UL>Facilidad de uso. </UL>
+							<UL>Capacidad avanzada de analisis de datos.</UL>
+							<p>Spark puede trabajar conjuntamente con Hadoop pero esto no es indispensable. Spark
+								tiene funcionalidades similares a Hadoop como son queries interactivos y el
+								procesamiento de datos en tiempo real. (Spark, 2017)</p>
+
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Arquitectura SPARK</h3>
+								<p>Las aplicaciones para Spark se ejecutan como procesos independientes coordinados a
+									través del objeto SparkContext. Más específicamente, SparkContext se conecta a los
+									gestores del clúster para asignar los recursos del sistema necesarios para su ejecución.</p>
+									<p>Conectados los nodos Spark se encarga de crear los ejecutores (executors) en cada uno
+										de ellos para ir realizando las operaciones de cómputo en el clúster.</p>
+										<img src="../IMAGENES_GRUPO/GRUPO 3/sparkimagenes.PNG"/>
+										
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>COMO FUNCIONA?</h3>
+								<p>Apache Spark es un motor de procesamiento distribuido responsable de orquestar, distribuir y monitorizar aplicaciones que constan de múltiples tareas de procesamiento de datos sobre varias máquinas de trabajo, que forman un cluster.
+									Como ya hemos mencionado, es posible leer los datos desde diferentes soluciones de almacenamiento persistente como Amazon S3 o Google Storage,  sistemas de almacenamiento distribuido como HDFS, sistemas key-value como Apache Cassandra, o buses de mensajes como Kafka.
+									A pesar de ello, Spark no almacena datos en sí mismo, sino que tiene el foco puesto en el procesamiento. Este es uno de los puntos que lo diferencian de Hadoop, que incluye tanto un almacenamiento persistente (HDFS) como un sistema de procesamiento (MapReduce) de un manera muy integrada.
+									Es importante hablar de la velocidad de procesamiento: la clave es la posibilidad que ofrece Spark para realizar el procesamiento en memoria. Esto, y la extensión del popular MapReduce para permitir de manera eficiente otros tipos de operaciones: Queries interactivas y Procesamiento en Streaming.</p>
 							</div>
 						</div>
 					</div>
