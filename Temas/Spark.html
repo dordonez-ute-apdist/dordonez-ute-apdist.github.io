@@ -101,7 +101,7 @@
 				<section id="main" class="container">
 					<header>
 						<h2>SPARK</h2>
-						<p></p>
+						<p>Apache Spark es un framework de computación en clúster open-source.</p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
@@ -133,8 +133,98 @@
 									A pesar de ello, Spark no almacena datos en sí mismo, sino que tiene el foco puesto en el procesamiento. Este es uno de los puntos que lo diferencian de Hadoop, que incluye tanto un almacenamiento persistente (HDFS) como un sistema de procesamiento (MapReduce) de un manera muy integrada.
 									Es importante hablar de la velocidad de procesamiento: la clave es la posibilidad que ofrece Spark para realizar el procesamiento en memoria. Esto, y la extensión del popular MapReduce para permitir de manera eficiente otros tipos de operaciones: Queries interactivas y Procesamiento en Streaming.</p>
 							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>SPARK CONTEXT</h3>
+								<p>Se trata del contexto básico de Spark, desde donde se crean el resto de
+									variables que maneja el framework. Sólo un SparkContext puede estar activo en todo el
+									clúster.</p>
+									<P>En la shell interactiva de Spark es creada automáticamente bajo el nombre sc, mientras
+										que en otros entornos es necesario instanciarlo explícitamente. La configuración de
+										SparkContext puede ser establecida mediante una variable llamada SparkConf</P>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>RDD</h3>
+								<p>
+									: Viene de las siglas en inglés de Resilient Distributed Datasets o, en castellano,
+“conjuntos distribuidos y flexibles de datos”. Representan una colección inmutable y
+particionada, cuyos elementos se los puede operar paralelamente</p>
+<P>Los RDD son altamente tolerantes a fallos. Posee una característica que permite que los
+	RDD se reconstruyan en el caso de que una porción de datos se pierda. Algunos de los
+	beneficios de utilizar los RDD son los siguientes:</P>
+	<ul>Tolerancia a fallos con bajo coste, se mantiene un estado anterior a la pérdida
+		de información.</ul>
+		<ul>Los RDD se puede trabajar con aplicaciones muy variadas.</ul>
+		<p>Dependiendo del tipo de dato con el que se esté trabajando existen dos tipos de RDDs</p>
+		<ul> Colecciones paralelizadas basadas en colecciones del lenguaje Scala.</ul>
+		<ul>Datasets de Hadoop, creados a partir de archivos almacenados en HDFS.
+		</ul>
+		<p>Son posibles dos operaciones bien diferenciadas sobre un RDD, dependiendo del
+			resultado final:</p>
+			<ul>Transformaciones, que crean nuevos conjuntos de datos, como puede ser la
+				operación map (), los datos pasan por una operación determinada y son devueltos
+				en un nuevo RDD.</ul>
+				<ul>Acciones, que devuelven un valor al driver del clúster después de llevar a cabo
+					una computación sobre el conjunto de datos. Un ejemplo es la función reduce (),
+					que agrega todos los elementos de un RDD mediante una función y devuelve el
+					resultado. (Spark, 2017)
+					</ul>
+
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>ECOSISTEMA DE SPARK</h3>
+								<p> <img src="../IMAGENES_GRUPO/GRUPO 3/spark2.PNG"/></p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>SPARK CORE</h3>
+								<p>Tiene todas las características básicas de Spark como las tareas de
+									programación, gestión de memoria, tolerancia a fallos, interacción con sistemas de
+									almacenamiento y también contiene el API que define los RDD, que son la principal
+									abstracción de la programación de Spark.<BR><BR>
+									<B>Spark Streaming:</B> Se utiliza para el procesamiento de datos en tiempo real con alta
+									escalabilidad, tolerancia a fallos y un rendimiento eficiente. Los datos pueden ser tomados 
+									15 de diversas fuentes como por ejemplo sockets TCP, y pueden ser procesados usando
+									algoritmos complejos expresados con funciones de alto nivel como map, reduce, join,
+									entre otras. Finalmente, los datos procesados pueden ser enviados a sistemas de archivos,
+									bases de datos, dashboards y visualizar sus resultados al mismo tiempo en el que estos
+									están siendo procesados.<BR>
+									<B>MLlib:</B> Es una biblioteca de funciones de machine learning de Spark diseñado para
+									funcionar en paralelo, posee una gran cantidad de algoritmos de aprendizaje y es accesible
+									desde todos los lenguajes de programación que soporta Spark.
+									El diseño y la filosofía de MLlib son de ser simplemente un conjunto de algoritmos sobre
+									los RDD.<BR>
+									<B>Spark SQL:</B> Es la interfaz que proporciona Spark para trabajar con tipos de datos que
+									están estructurados como bases de datos, como con datos semiestructurados como por
+									ejemplo tweets respecto algún tema en específico. Es muy eficiente tanto para la carga
+									como para las consultas sobre los mismos.<BR>
+									<B>Graphx:</B> Es una biblioteca de Spark que sirve para la computación de grafos en paralelo.
+									Así como Spark Streaming y Spark SQL, GraphX extiende a Spark RDD introduciendo
+									una nueva abstracción Graph: un multígrafo dirigido con propiedades asociadas a cada
+									vértice y borde. Para soportar el cálculo de grafos, GraphX expone un conjunto de
+									operadores fundamentales (por ejemplo, subgraph, joinVertices y aggregateMessages).
+									GraphX posee muchos algoritmos de grafos y constructores para simplificar las tareas de
+									manipulación de estos.<BR>
+									<B>SparkR:</B> Es un paquete de R que proporciona una interfaz ligera para usar Apache Spark
+									de R. En Spark 1.6.0, SparkR proporciona una implementación de marco de datos
+									distribuidos que soporta operaciones como selección, filtrado, agregación, entre otras.
+									(Similar a los marcos de datos R), pero en grandes conjuntos de datos. SparkR también
+									admite Machine Learning usando MLlib.<BR>
+									</B>Clúster Manager:</B> Spark está diseñado para ser fácilmente escalable para que pueda
+									pasar desde unos cuantos nodos a miles de nodos. Para llevar a cabo esto Spark cuenta
+									con gestores de clúster llamados cluster managers que maximizan la flexibilidad con la
+									que se agregan o quitan nodos según sea el caso, puede contar tanto con gestores externos 
+									16<BR>
+									(Hadoop YARN, Apache Mesos), como con su propio gestor interno llamado Standalone
+									Scheduler. (Thottuvaikkatumana, 2016)</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>VIDEO DEMOSTRATIVO DE SPARK</h3>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/WR9HnAdYOfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									
+							</div>
 						</div>
 					</div>
+					
+					
 				</section>
 
 			<!-- Footer -->
