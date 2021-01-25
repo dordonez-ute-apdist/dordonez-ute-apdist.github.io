@@ -88,7 +88,12 @@
 										<li><a href="../Consultas/JSP.html">JSP</a></li>
 										<li><a href="../Consultas/Thymeleaf.html">Thymeleaf</a></li>
 										<li><a href="../Consultas/FreeMarker.html">Freemarker</a></li>
-										<li><a href="../Consultas/Groovy.html">Groovy</a></li>																				
+										<li><a href="../Consultas/Multiprocesos.html">Multiprocesos</a></li>
+										<li><a href="../Consultas/Groovy.html">Groovy</a></li>	
+										<li><a href="../Consultas/Hdfs.html">HDFS</a></li>
+										<li><a href="../Consultas/NNG.html">NNG</a></li>	
+										<li><a href="../Consultas/zeromq.html">ZEROMQ</a></li>
+										<li><a href="../Consultas/clusterfs.html">CLUSTERFS</a></li>																				
 									</ul>
 								</li>
 							</ul>
@@ -101,23 +106,90 @@
 				<section id="main" class="container">
 					<header>
 						<h2>VIRTUALIZACION Y CONTENEDORIZACION</h2>
-						<p>A generic page for every non-generic situation.</p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-						<div class="row">
-							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-						</div>
-					</div>
+						<p> Es una tecnología que permite crear servicios de TI útiles mediante recursos que están ligados tradicionalmente al hardware.
+							Además, distribuye sus funcionalidades entre diversos usuarios o entornos, lo que permite utilizar toda la capacidad de una máquina física.</p>
+							<img src="../IMAGENES_GRUPO/GRUPO 3/ejemplovirtualizacion.png">
+												
+							<p> La virtualizacion permite dividir a el servidor de correo en dos servidores unicos que pueden administrar tareas independientes,
+								para poder migrar las aplicaciones heredadas. se utiliza el mismo hardware, pero de manera mas eficiente
+								</p>
+								
+								<h3> ¿Como funciona la Virtualizacion? </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/comofuncionavirtualizacion.png">
+								<br> 
+								<p>Los recursos se dividen según las necesidades, desde el entorno físico hasta los numerosos entornos virtuales. 
+									Los usuarios interactúan con los cálculos y los ejecutan dentro del entorno virtual (generalmente denominado máquina de guest o máquina virtual).
+									La máquina virtual funciona como un archivo de datos único. Al igual que con cualquier archivo digital, se puede mover de una computadora a otra,
+									abrir en cualquiera de ellas y esperar que funcione de la misma manera. Cuando el entorno virtual se está ejecutando y un usuario 
+									o programa emite una instrucción que requiere recursos adicionales del entorno físico, el hipervisor transmite la solicitud al sistema 
+									físico y guarda los cambios en la caché. Todo esto sucede prácticamente a la misma velocidad que habría si este proceso se realizara 
+									dentro de la máquina física (en especial, si la solicitud se envía a través de un hipervisor open source basado en KVM, la máquina 
+									virtual basada en el kernel).</p>
+
+								<h2>Tipos de Virtualizacion:</h2>
+								<br>
+								<h3>Virtualizacion de Datos </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/virtualizaciondatos.png" alt="">
+								<br>
+								<h3>Virtualizacion de Escritorio </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/virtualizacionescritorios.png" width="500"
+								height="500">
+								<br>
+								<h3>Virtualizacion de Servidores </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/virtualizacionservidores.png" alt="">
+								<br>
+								<h3>Virtualizacion del sistema operativo  </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/virtualizacionsop.png" width="500"
+								height="500">
+								<br>
+								<h3>Virtualizacion de las funciones de red </h3>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/virtualizacionred.png" width="500"
+								height="500">
+							
+								<br>
+								<h3> Contenedorizacion</h3>
+								<br>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/contenedorizacion.jpg"  width="500"
+								height="500">
+								<br>
+								<p> Es un método de virtualizacion a nivel de sistema operativo que se utiliza para implementar y 
+							  ejecutar aplicaciones distribuidas sin iniciar una maquina virtual completa para cada aplicacion
+								</p>
+								<br>
+								<h3> La funcion de la contenedorizacion </h3>
+								<br>
+								<p>Incluyen los componentes del ambientte de ejecucion, copmo los archivos, las variables de entorno y 
+								bibliotecas, necesarios para ejecutar el software deseado. Los contenedores de aplicacion consumen menos recursos que una 
+								implementacion comparable en las maquinas virtuales. Y esto porque los contenedores comparten recursos sin un sistema
+								operativo completo para respaldar cada aplicacion. 
+							   </p>
+								
+								<p>El conjunto completo de informacion a ejecutar en un contenedor se 
+									llama IMAGEN.</p>
+								<p>El motor del contenedor despliega estas imagenes en los hosts </p>
+								<br>
+								<img src="../IMAGENES_GRUPO/GRUPO 3/dockerconte.png" width="500"
+								height="500">
+								<br>
+								<p>La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan
+								  ejecutarse en cualquier máquina con Docker instalado, independientemente del sistema operativo que la máquina tenga por debajo,
+								  facilitando así también los despliegues.La Definición traducida de la documentación oficial, demasiada información en pocas frases,
+								  no me entero de nada. Bien, empecemos por lo primero ¿qué es un contenedor?Este concepto ya es antiguo, y viene de Linux, 
+								  pero por hacerte un símil con el mundo real, imagina en tu cabeza un contenedor de esos que suelen llevar los barcos de mercancías,
+								  que contiene distintos productos.</p>
+								<br>
+								<h3> ¿Que Beneficios tiene usar DOCKER </h3>
+								<br>
+								<p> Docker es una herramienta diseñada para beneficiar tanto a desarrolladores, testers, como administradores de sistemas, en relación
+									a las máquinas, a los entornos en sí donde se ejecutan las aplicaciones software, los procesos de despliegue, etc.En el caso de
+									los desarrolladores, el uso de Docker hace que puedan centrarse en desarrollar su código sin preocuparse de si dicho código funcionará
+									en la máquina en la que se ejecutará.</p>
+							  <br><br/>
+
+							
 				</section>
 
 			<!-- Footer -->
