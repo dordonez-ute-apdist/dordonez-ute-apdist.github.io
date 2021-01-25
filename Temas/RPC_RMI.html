@@ -171,16 +171,55 @@
 					
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<h3>RMI</h3>
+						<p>Es un mecanismo ofrecido por Java para invocar un método de manera remota que forma parte del entorno estándar de ejecución de Java y proporciona un mecanismo simple para la comunicación de servidores en aplicaciones distribuidas basadas exclusivamente en Java.</p>
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<ul><h3>Protocolo para aplicaciones distribuidas</h3>
+                                    <li>Cliente-Servidor</li>
+                                    <li>El cliente invoca métodos en el servidor “como ” si fueran locales</li>
+                                </ul>
+                                <ul><h3>PARTICIPANTES</h3>
+                                    <li>Servidor</li>
+                                    <li>Cliente</li>
+                                    <li>Rmiregistry</li>
+                                    <li>Interfaz remota</li>
+                                </ul>
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>PROCEDIMIENTO</h3>
+                                <ul><h3>Cliente</h3>
+                                    <li>Conoctarse al registro</li>
+                                    <li>Obtener la referencia al servidor</li>
+                                    <li>Invocar los métodos requeridos</li>
+                                </ul>
+                                
+                                <ul><h3>Ejecución</h3>
+                                    <li>Arrancar el registro</li>
+                                    <li>Arrancar el servidor</li>
+                                    <li>Arrancar el cliente</li>
+                                </ul>
+                                
+                                <ul><h3>Interfaz Remota</h3>
+                                    <li>Hereda de java.rmi.Remote</li>
+                                    <li>Define los métodos ofrecidos por el servidor, y que podrán ser invocados por el cliente</li>
+                                    <li>Los métodos deben declararse con throws RemoteException</li>
+                                </ul>
+                                
+                                <ul><h3>Servidor</h3>
+                                    <li>Implementa la interfaz remota</li>
+                                    <li>Crea el objeto remoto y lo exporta para que pueda recibir conexiones</li>
+                                    <li>Registra el objeto remoto en el registro para poder entregar su referencia a los clientes</li>
+                                </ul>
+
+                                <ul><h3>SEMANTICA DE RMI</h3>
+                                    <li>Un cliente siempre hace referencia a un objeto remoto a través de una de las interfaces Remote que éste implementa.</li>
+                                    <li>Un método remoto siempre debe declararse indicando que puede lanzar una RemoteException.</li>
+                                    <li>Registra el objeto remoto en el registro para poder entregar su referencia a los clientes</li>
+                                    <li>Los clientes de objetos remotos deben capturar y tratar las excepciones remotas.</li>
+                                    <li>Un objeto pasado como parámetro a un objeto remoto o devuelto desde un método remoto debe ser serializable, o ser otro objeto Remote.</li>
+                                    <li>Un objeto pasado como parámetro a un objeto remoto o devuelto desde un método remoto lo hace valor en vez de por referencia, excepto si dicho objeto es remoto.</li>
+                                </ul>
 							</div>
 						</div>
 					</div>
