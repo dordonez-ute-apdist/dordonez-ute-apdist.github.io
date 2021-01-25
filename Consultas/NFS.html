@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Aplicaciones Distribuidas 7mo D</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="../index.html">Aplicaciones Distribuidas 7mo D</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../index.html">Inicio</a></li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Temas</a>
+							<ul>
+								<li>
+									<a href="#">Parcial Uno</a>
+									<ul>
+										<li><a href="../Temas/HilosSincronizacion.html">Hilos y Sincronización</a></li>
+										<li><a href="../Temas/ForkJoin.html">Fork Join</a></li>
+										<li><a href="../Temas/StreamParalelas.html">Streams Paralelas</a></li>
+										<li><a href="../Temas/JavaStreams.html">Java Streams</a></li>
+										<li><a href="../Temas/TcpIp_Sockets.html">TCP/IP Sockets UDP</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Dos</a>
+									<ul >
+										<li><a href="../Temas/RPC_RMI.html">RPC y RMI</a></li>
+										<li><a href="../Temas/VirtualizacionContenedores.html">Virtualización y Cont</a></li>
+										<li><a href="../Temas/SpringySpringBoot.html">Spring y SpringBoot</a></li>
+										<li><a href="../Temas/SpringWebMVC.html">Spring Web MVC</a></li>
+										<li><a href="../Temas/SpringBDD.html">Spring BDD</a></li>
+										<li><a href="../Temas/PlantWebSpring.html">Plantillas Web Spring</a></li>
+										<li><a href="../Temas/ServWebJMS.html">Servicios Web JMS</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Tres</a>
+									<ul>
+										<li><a href="../Temas/SistDistArchivos.html">Sistemas Dist de Archivos</a></li>
+										<li><a href="../Temas/Hadoop.html">Hadoop</a></li>
+										<li><a href="../Temas/Spark.html">Spark</a></li>
+										<li><a href="../Temas/MPI_ZeroMQ_NNG.html">MPI, ZeroMQ, NNG</a></li>
+										
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Consultas</a>
+							<ul>
+								<li>
+									<a href="#">Parcial Uno</a>
+									<ul>
+										<li><a href="MapReduce.html">Map Reduce</a></li>
+										<li><a href="ForkJoin.html">Fork Join</a></li>
+										<li><a href="MetodosPorDefecto.html">Metodos por Defecto</a></li>
+										<li><a href="ExpLambda.html">Expresión Lambda</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Dos</a>
+									<ul>
+										<li><a href="MaquinaVirtual.html">Maquina Virtual</a></li>
+										<li><a href="VirtualBox.html">Virtual Box</a></li>
+										<li><a href="Contenedores.html">Contenedores</a></li>
+										<li><a href="Docker.html">Docker</a></li>
+										<li><a href="InversionControl.html">Inversión de Control</a></li>
+										<li><a href="InyeccionDependencias.html">Inyección Dependencia</a></li>
+										<li><a href="ConvencionConfig.html">Convencion Config</a></li>
+										<li><a href="MVC.html">MVC</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Parcial Tres</a>
+									<ul>
+										<li><a href="JSP.html">JSP</a></li>
+										<li><a href="Thymeleaf.html">Thymeleaf</a></li>
+                                        <li><a href="FreeMarker.html">Freemarker</a></li>
+                                        <li><a href="NFS.html">NFS</a></li> 
+										<li><a href="Groovy.html">Groovy</a></li>																				
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- <li><a href="#" class="button">Sign Up</a></li> -->
+					</ul>
+				</nav>
+			</header>
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>NETWORK FILE SYSTEM (NFS)</h2>
+						
+					</header>
+					<div class="box">
+                        <p align="justify">Network File System (sistema de archivos de red), o NFS, es un protocolo de nivel de aplicación, según el Modelo OSI. Es utilizado para sistemas de archivos distribuidos en un entorno de red de computadoras del área local. Posibilita que distintos sistemas conectados a una misma red accedan a ficheros remotos como si se tratara de locales. Originalmente fue desarrollado en 1984 por Sun Microsystems, con el objetivo de que sea independiente de la máquina, el sistema operativo y el protocolo de transporte, esto fue posible gracias a que está implementado sobre los protocolos XDR (presentación) y ONC RPC (sesión).​ El protocolo NFS está incluido por defecto en los Sistemas Operativos UNIX y la mayoría de distribuciones Linux.</p>
+                        <h3>Cliente NFS</h3>
+						
+								<p align="justify">Como con cualquier otro sistema de archivos, incorporar un espacio compartido NFS en el jerarquía del sistema es necesario montarlo (y el paquete nfs-common). Debido a que este sistema de archivos tiene sus peculiaridades fueron necesarios unos pocos ajustes en la sintaxis de mount y en el archivo /etc/fstab.
+                                </p>
+                                <b>Montaje manual con el programa mount</b>
+                                <div align="center">
+                                    <img style="border:1px solid black;" class="img-fluid" src="../IMAGENES_GRUPO/GRUPO 1/nfs11.JPG"  width="1000" height="60" ><br><br>
+                                </div>
+
+                                <b>Elemento NFS en el archivo /etc/fstab
+                                </b>
+                                <div align="center">
+                                    <img style="border:1px solid black;" class="img-fluid" src="../IMAGENES_GRUPO/GRUPO 1/nfs12.JPG"  width="1000" height="60" ><br><br>
+                                </div>
+                                <p align="justify">El elemento descrito monta automáticamente en cada arranque del sistema el directorio NFS /shared/ desde el servidor arrakis en el directorio local /srv/shared/. Se solicita acceso de lectura y escritura (de ahí el parámetro rw). La opción nosuid es una medida de protección que elimina cualquier bit setuid o setgid de los programas almacenados en el espacio compartido. Si el espacio compartido NFS está destinado únicamente a almacenar documentos, también se recomienda utilizar la opción noexec, que evita la ejecución de programas almacenados en el espacio compartido. Es importante tener en cuenta que, en el servidor, el directorio shared se encuentra dentro del directorio exportado como raiz de NFSv4 (por ejemplo /export/shared), no es un directorio de primer nivel.
+                                </p>
+                                <h3>Servidor NFS</h3>
+                                <p align="justify">El servidor NFS es parte del núcleo Linux; en los núcleos que Debian provee está compilado como un módulo de núcleo. Si necesita ejecutar el servidor NFS automáticamente al iniciar, debe instalar el paquete nfs-kernel-server; contiene los scripts de inicio relevantes.</p>
+                                <p>El archivo de configuración del servidor NFS, /etc/exports, enumera los directorios que estarán disponibles en la red (exportados). Para cada espacio compartido NFS, sólo tendrán acceso las máquinas especificadas. Puede obtener un control más detallado con unas pocas opciones. La sintaxis para este archivo es bastante simple:
+                                </p>
+                                <div align="center">
+                                    <img style="border:1px solid black;" class="img-fluid" src="../IMAGENES_GRUPO/GRUPO 1/nfs13.JPG"  width="1000" height="60" ><br><br>
+                                </div>
+
+                                <p align="justify">Es importante recalcar que con NFSv4 todas las carpetas exportadas deben ser parte de un único árbol de directorios y que el directorio raíz de este árbol debe ser exportado e identificado con la opción fsid=0 o fsid=root.</p>
+                                <p align="justify">Puede identificar cada máquina mediante su nombre DNS o su dirección IP. También puede especificar conjuntos completos de máquinas utilizando una sintaxis como *.falcot.com o un rango de direcciones IP 192.168.0.0/255.255.255.0 o 192.168.0.0/24.</p>
+                                <p align="justify">De forma predeterminada, el servidor sólo responderá a peticiones NFS cuando se complete la operación actual de disco (la opción sync); puede desactivar esta funcionalidad con la opción async. Las escrituras asíncronas aumentarán un poco el rendimiento a cambio de una disminución de la fiabilidad, debido al riesgo de pérdida de datos en caso de un cierre inesperado del servidor durante el tiempo que transcurre entre que se recibe la petición de escritura y cuando los datos hayan sido escritos realmente en el disco. Debido a que el valor predeterminado cambió recientemente (comparado con el valor histórico de NFS), se recomienda configurarlo explícitamente.
+                                </p>
+                                <h3>Arquitectura de NFS</h3>
+                                <div align="center">
+                                    <img style="border:1px solid black;" class="img-fluid" src="../IMAGENES_GRUPO/GRUPO 1/nfs13.JPG"  width="1000" height="60" ><br><br>
+                                </div>
+                                <p align="justify">Para montar un directorio el cliente envía un nombre de camino al servidor, pide permiso para montar este directorio si el camino existe y el directorio ha sido exportado, el servidor devuelve un manejador de fichero al cliente una posterior lectura y escritura se realiza utilizando este manejador.</p>
+                                <p align="justify">En caso de auto montado se asocia un directorio remoto en varios servidores con un directorio local cuando se abre un fichero remoto se envía un mensaje a cada uno de los servidores se monta el directorio del servidor que conteste primero.</p>
+                                <p align="justify">El Sistema de Ficheros Virtual mantiene una tabla para los ficheros abiertos cada entrada se conoce como un V-nodo,en el V-nodo se indica si el fichero es local o remoto, si el fichero es local en el V-nodo hay un puntero al i-nodo del S.F local, si es remoto, al r-nodo del cliente NFS El r-nodo contiene información suficiente para poder acceder al fichero.</p>
+                                <h3>nstalacion y configuracion</h3>
+                                <b>Instalación de NFS</b>
+                                    <p align="justify">Para poder disfrutar del servicio de compartir carpetas en la red mediante NFS, en el PC servidor es necesario instalar el paquete del servidor NFS. 
+                                    Lo normal es que todos los PC dispongan de paquetes servidor de NFS ya que en cualquier momento puede existir la necesidad de tener que compartir una carpeta desde cualquier PC, aunque lo habitual es que el único que comparta sea el servidor. Que un PC de un usuario tenga instalado el paquete del servidor NFS, no
+                                    significa que automáticamente esté compartiendo su sistema de archivos en la red. Para ello es necesario configurar y arrancar el servicio.</p>
+                                    <p>Si deseamos instalar la última versión disponible, podemos hacerlo con apt-get desde una consola de root:</p>
+                                    <p>// Instalación de NFS</p>
+                                    <p># apt-get install nfs-common nfs-kernel-server</p>
+                                    <h3>Configuración del servidor NFS</h3>
+                                    <p>Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo /etc/exports
+                                    </p>
+                                    <p>// Archivo de configuración del servidor NFS</p>
+                                    <p>/etc/exports</p>
+                                    <p>En cada línea del archivo de configuración del servidor NFS /etc/exports, se puede especificar:</p>
+                                    <ul>
+                                        <li type="disc">La carpeta que se quiere compartir</li>
+                                        <li type="disc">El modo en que se comparte (solo lectura 'ro' o lectura y escritura 'rw' ) </li>
+                                        <li type="disc">Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)</li>
+                                    </ul>
+                                    <p>A continuación mostramos un sencillo archivo /etc/exports para configurar algunas carpetas compartidas</p>
+                                    <p>// Ejemplo de archivo /etc/exports de configuración del servidor NFS:    </p>
+                                    <p># Compartir la carpeta home del servidor</p>
+                                    <p># en modo lectura y escritura y accesible desde la red 192.168.0.0/24 </p>
+                                    <p>/home 192.168.0.0/255.255.255.0(rw)</p>
+                                    <p># Compartir carpeta tmp a todos como 'solo-lectura' </p>
+                                    <p>/tmp *(ro)</p>
+                                    <p># Compartir carpeta /var/log a un PC como 'solo-lectura' /var/log 192.168.0.211(ro)</p>
+                                    <h3>Arranque y parada manual de NFS</h3>
+                                    <p>Para que el servidor NFS funcione, es necesario que esté arrancado el servicio portmap, por lo tanto, la primera acción será iniciar portmap por si no estuviera arrancado:</p>
+                                    <p>// Iniciar portmap</p>
+                                    <p>sudo /etc/init.d/portmap start</p>
+                                    <p>Para poner en marcha el servicio NFS, o cada vez que modifiquemos el archivo /etc/exports, debemos reiniciar el servidor NFS, mediante el comando:</p>
+                                    <p>// Reinicio del servidor NFS</p>
+                                    <p>sudo /etc/init.d/nfs-kernel-server restart</p>
+                                    <p>Si deseamos detener el servidor NFS, debemos ejecutar:</p>
+                                    <p>// Parada del servidor NFS</p>
+                                    <p>sudo /etc/init.d/nfs-kernel-server stop</p>
+                                    <h3>Versiones de NFS</h3>
+                                    <b>NFSv2 - marzo de 1989</b>
+                                    <p align="justify">NFS Versión 2 (RFC-1094) opera sobre UDP, manteniendo el lado del servidor sin estado, con  bloqueo  implementado fuera del protocolo central. NFSv2 limita las compensaciones de archivos a una cantidad de 32 bits, lo que hace que el tamaño máximo de archivos accesible para los clientes sea de 4,2 GB. La versión 2 también limita el tamaño de la transferencia de datos a 8 KB y requiere que los servidores NFS envíen los datos escritos por un cliente a un disco o memoria de acceso aleatorio no volátil ( NVRAM ) antes de responder. La versión 2 de NFS ahora se considera obsoleta.</p>
+
+                                    <b>NFSv3 - junio de 1995</b>
+                                    <p align="justify">Un sistema de archivos sin estado, NFS versión 3 (RFC-1813) extiende las compensaciones de archivos de 32 a 64 bits y relaja la regla de limitación de transferencia de datos de 8 KB para permitir transferencias de lectura y escritura más grandes. Sun Microsystems agregó TCP como una opción de transporte en esta versión. El transporte TCP hace posible el uso de NFS en una red de área amplia ( WAN ) y mejora las capacidades de transferencia de lectura y escritura. NFSv3 admite tanto TCP como UDP . La versión 3 también agregó una operación COMMIT que permite escrituras asincrónicas confiables y un ACCESS RPC que mejora el soporte para listas de control de acceso ( ACL ) y usuarios avanzados.. En NFSv3, el servidor responde a WRITE RPC al instante, sin sincronizar con un disco o NVRAM. Para asegurarse de que los datos estén en un almacenamiento estable, el cliente solo necesita enviar un COMMIT RPC. A pesar del lanzamiento de las versiones 4, 4.1 y 4.2., NFSv3 sigue siendo la versión más utilizada de NFS.
+                                    </p>
+
+                                    <b>NFSv4 - abril de 2003</b>
+                                    <p align="justify">La versión 4 de NFS (RFC-3530 ) es un sistema de archivos con estado que ofrece una autenticación sólida, almacenamiento en caché de archivos avanzado, capacidad de internacionalización mejorada y mejor soporte para el intercambio de archivos de Microsoft Windows . En lugar de montarse por separado, las exportaciones de esta versión se pueden montar juntas en una estructura de árbol de directorios. Además, NFSv4 emplea un bloqueo integrado que se basa en el arrendamiento dentro del mismo protocolo en lugar de ser permanente como en NFSv3. La comunicación se maneja con RPC compuestos para mejorar el rendimiento, mientras que el uso obligatorio de TCP mejora la confiabilidad.</p>
+
+                                    <b>NFSv4.1 - enero de 2010</b>
+                                    <p align="justify">Un protocolo de versión secundaria, NFSv4.1 (RFC-5661 ) agrega características que permiten el uso de NFS en WAN globales. Esta actualización estandariza NFS paralelo ( pNFS ) para abordar problemas de ancho de banda y escalabilidad, y debido a que el conjunto de caracteres ASCII ya no proporciona las capacidades descriptivas necesarias para idiomas con alfabetos grandes, esta actualización agrega soporte de internacionalización usando UTF-8 para nombres de archivos, directorios y otros identificadores. UTF-8 es una codificación de caracteres de ancho variable que es tan compacta como ASCII pero también puede contener Unicodecaracteres. NFSv4.1 también incluye un nuevo modelo de sesión (para mantener el estado del servidor en relación con las conexiones que pertenecen al cliente) y la delegación de directorio (la capacidad de delegar operaciones de archivos al cliente que accede).</p>
+
+                                    <b>NFSv4.2 - noviembre de 2016</b>
+                                    <p align="justify">NFS es una solución de bajo costo para compartir archivos en red que es fácil de configurar ya que utiliza la infraestructura IP existente. Una ventaja significativa de NFS es que permite la administración central, lo que reduce la necesidad de software adicional y espacio en disco en los sistemas de usuarios individuales. NFS es fácil de usar y permite a los usuarios acceder a archivos en hosts remotos de la misma manera que acceden a archivos locales. Esto reduce la necesidad de dispositivos de almacenamiento de medios extraíbles y aumenta la seguridad, ya que hay menos CD, DVD, discos Blu-Ray , disquetes y  unidades USB en circulación.
+                                    </p>
+
+                                    <b>Ventajas de NFS</b>
+                                    <p align="justify">La última actualización de la versión secundaria, NFSv4.2 (RFC-7862), agrega características para mejorar las arquitecturas modernas de almacenamiento de escalamiento horizontal . Las actualizaciones incluyen: copia del lado del servidor (SSC permite la clonación e instantáneas de archivos por cualquier servidor de almacenamiento NFSv4.2), aviso de entrada / salida ( E / S ) de la aplicación, reservas de espacio (asegura que un archivo tendrá almacenamiento disponible), archivos dispersos ( un archivo que contiene grandes bloques de datos cero que se transfieren como ceros cuando se leen del archivo), compatibilidad con bloques de datos de la aplicación (ADB permite la definición del formato de un archivo) y NFS etiquetado que permite compatibilidad parcial con Linux con seguridad mejorada ( SELinux ).</p>
+
+                                    <b>Desventajas de NFS</b>
+                                    <p align="justify">NFS se basa en RPC que son intrínsecamente inseguros y solo deben usarse en una red confiable detrás de un firewall . De lo contrario, NFS será vulnerable a las amenazas de Internet. Algunas revisiones de NFSv4 y NFSv4.1 sugieren que estas versiones tienen un ancho de banda y una escalabilidad limitados (mejorados con NFSv4.2) y que NFS se ralentiza durante el tráfico de red pesado.</p>
+					<br>
+
+                                    <div align="center"><iframe width="350" height="200" src="https://www.youtube.com/embed/OBJKKoKTsyg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+						<ul class="copyright">
+						<li>&copy; Aplicaciones Distribuidas. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
