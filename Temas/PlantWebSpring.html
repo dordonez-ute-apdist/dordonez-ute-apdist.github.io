@@ -101,22 +101,40 @@
 				<section id="main" class="container">
 					<header>
 						<h2>PLANTILLAS WEB SPRING</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<p>es uno de los nuevos frameworks</p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-						<div class="row">
-							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-						</div>
+						<h3>INTRODUCCION </h3>
+						<p>Spring WebFlux es uno de los nuevos frameworks que vienen con la nueva versión de Spring 5. ¿Para qué sirve exactamente Spring WebFlux? . Vamos a repasar algunos de los conceptos fundamentales en los cuales Spring Framework se ha basado en sus últimas versiones. Para empezar vamos a revisar un poco Spring MVC que en su momento fue un avance importante y substituyo en muchos lugares a Struts como framework de capa de presentación.
+							</p>
+						<P> Este framework adquirió madurez en la versión 3 de Spring Framework . Siempre se ha usado para construir aplicaciones Web MVC clásicas</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/Spring.PNG"/></P>
+						<P>Estas aplicaciones se construyeron de forma masiva ya que aportaban orden en la construcción de aplicaciones web y la facilidad de acceder a ellas desde cualquier navegador y lugar.</P>
+						<H3>Spring 4 y REST</H3>
+						<P>Con el paso del tiempo se necesitaron arquitecturas más flexibles en las cuales se priorizara la construcción de servicios REST y cualquier tipo de cliente se pudiera conectar a ellas .</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/SPRING3.PNG"/></P>
+						<P> Podría ser una aplicación Web , una aplicación móvil o otra aplicación que hiciera el rol de cliente aunque fuera una aplicación de lado servidor . La publicación se servicios REST abre las puertas a la flexibilidad a nivel de el tipo de clientes</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/SPRING4.PNG"/></P>
+						<P>Es en este tipo de aplicaciones en las cuales es habitual por ejemplo encontrarnos un cliente de Angular o React ya que acceden a servicios REST que publican datos en formato JSON y los usan para presentar la información al usuario.</P>
+						<P> <img src="../IMAGENES_GRUPO/GRUPO 3/SPRING5.PNG"/></P>
+						<P><B>REST y Clientes</B></P>
+						<P>Hoy en día nos encontramos que una parte importante de los clientes a nivel de REST pueden ser clientes que necesitan consultar una información puntual de nuestra aplicación a nivel de REST . Es decir no necesitan acceder a todo el abanico de funcionalidad que publicamos sino que necesitan un pequeño subconjunto.</P>
+						<P> <img src="../IMAGENES_GRUPO/GRUPO 3/SPRING6.PNG"/></P>
+						<H3><B>REST ,Combinando peticiones</B></H3>
+						<P>Con este tipo de arquitecturas es muy habitual tener la necesidad que por ejemplo nuestra aplicación cliente de Spring necesite acceder a servicios REST de multiples aplicaciones que en este caso hacen el rol de aplicaciones servidoras.	</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/SPRING7.PNG"/></P>
+						<P><H3><B>Spring WebFlux</B></H3></P>
+						<P>Es aquí donde hay un salto en cuanto a como podemos tratar este tipo de arquitectura. ¿Podemos usar Spring 4 de forma clásica? . Esta claro que si y que puede publicar servicios REST y puede consumirlos con REST Templates . Ahora bien existe un problema si cada petición tarda 3 segundos en hacerse a nivel de REST y tenemos que realizar las 6 peticiones que aparecen en el diagrama . Habrá que sumar los tiempos de cada una ya que se trata de lo que habitualmente se conoce como peticiones bloqueantes es decir yo realizo una petición y espero a su resultado para poder realizar la siguiente :</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/SPRING8.PNG"/></P>
+						<P>Esto es algo que Spring 4 no tiene muchas capacidades para resolver . Sin embargo existen en muchas casuisticas en las cuales nos gustaría realizar todas las peticiones de forma simultanea y en cuanto tengamos el resultado de todas dar por finalizada la tarea. Es decir si cada petición tarda 3 segundos y hacemos todas a la vez . En 3 segundos tendremos todos los datos ya en nuestra aplicación y no en 18.</P>
+						<P><img src="../IMAGENES_GRUPO/GRUPO 3/SPRING9.PNG"/></P>
+
+						<H3>VIDEO DEMOSTRATIVO</H3>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/IHw6KG4WYTQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						
+
+
 					</div>
 				</section>
 
