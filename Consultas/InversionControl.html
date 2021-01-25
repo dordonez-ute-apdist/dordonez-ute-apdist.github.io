@@ -100,25 +100,56 @@
 			<!-- Main -->
 				<section id="main" class="container">
 					<header>
-						<h2>Generic Consultas</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<h2>Inversion De Control</h2>
+						<p>Consulta Grupo 1</p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-						<div class="row">
-							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-						</div>
-					</div>
-				</section>
+
+						<h3><strong> Inversión de control</strong></h3>	<br>
+					  <p align="justify">Es un principio de diseño de software en el que el flujo de ejecución de un programa se invierte respecto a los métodos de programación tradicionales.
+              la inversión de control se especifican respuestas deseadas a sucesos o solicitudes de datos concretas, dejando que algún tipo de entidad o arquitectura externa lleve a cabo las acciones
+              de control que se requieran en el orden necesario y para el conjunto de sucesos que tengan que ocurrir.
+              Esta nueva filosofía es muy útil cuando se usan frameworks de desarrollo. Es el framework el que toma el control, el que define el flujo de actuación o el ciclo de vida de una petición. 
+              Es decir, es el framework quien ejecuta el código de usuario            
+                                                     
+             <br><br>         
+
+           <h3><strong>Funcionamiento	</strong></h3>	<br>
+            <p align="justify">Inversion of control (IoC) es una forma de trabajar que rompe con el formato tradicional, en donde el programar es el encargado de definir la secuencia de operaciones que se deben
+               de realizar para llegar a un resultado. En este sentido el programador debe conocer todos los detalles del framework y las operaciones a realizar en él, por otra parte, el Framework no conoce 
+               absolutamente nada de nuestro programa. Es decir, solo expone operaciones para ser ejecutada. La siguiente imagen muestra la forma de trabajo normal.
+            </p>
+            <img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime.png"  >
+             <br><br> 
+
+            <p align="justify">Veamos que nuestra aplicación es la que llama en todo momento al Framework y este hace lo que la App le solicita. Por otra parte, al Framework no le interesa en absoluto la App.
+              Pero qué pasaría si invirtiéramos la forma de trabajo, y que en lugar de que la App llame funciones del Framework, sea el Framework el que ejecute operaciones sobre la App, ¿suena extraño no? 
+              Pues en realidad a esta técnica es a la que se le conoce como Inversion of Control. Veamos en la siguiente imagen como es que funciona IoC:.</p>
+            <div><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime2.png" ></div>
+           <br><br>
+           <p align="justify">Esta última imagen se ve bastante parecida a la anterior, sin embargo, tiene una gran diferencia, y es que las llamadas se invirtieron, 
+            ahora es el Framework es el realiza operaciones sobre nuestra App.
+            Seguramente a estas alturas te pregunta cómo es que un Framework que no conoce tu App y que incluso se compilo desde mucho antes puede realizar operaciones 
+            sobre nuestra App. La respuesta es simple pero complicada, y es que utilizar este IoC es mucho más simple de lo que parecería, pero implementar un Framework 
+            de este tipo tiene un grado alto de complejidad, dicho de otra manera, si tú eres la App puedes implementar muy fácilmente al Framework, pero si tu estas desarrollando
+            el Framework puede ser un verdadero dolor de cabeza.</p>
+            <div><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime3.png" ></div>
+            <br><br>
+            <p align="justify">Analicemos la imagen, primero el Framework analizará al App mediante los metadatos, este encontrará la clase EmployeeService que esta anotada con @Service,
+            seguido le inyectará una instancia del TrasnactionManager mediante el método setTransactionManager que esta anotado con @Resource, finalmente el servicio será retornado a la App
+            para ser utilizado.Cabe mencionar que los proxys son clave para controlar como la forma en que el usuario utiliza las operaciones. Puedes encontrar mucho más de este patrón en mi libro.</p>
+            <br><br>
+          </ul>
+
+					<div align="center">
+            <h3>Ejemplo  Inversión de control</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vFzP2SaMyA0" 
+            frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+          </div>
+					
+	    </section>
 
 			<!-- Footer -->
 				<footer id="footer">
