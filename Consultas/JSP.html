@@ -100,21 +100,111 @@
 			<!-- Main -->
 				<section id="main" class="container">
 					<header>
-						<h2>Generic Consultas</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<h2>JAVA SERVER PAGES</h2>
+						
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<h3>¿ Qué es Java Server Pages?</h3>
+						<p  align="justify">Java Server Pages (JSP) es una tecnología que ayuda a los desarrolladores de software 
+							a crear páginas web dinámicas basadas en HTML y XML,
+							entre otros tipos de documentos. JSP es similar a PHP, 
+							pero usa el lenguaje de programación Java.
+							</br>
+							Para desplegar y correr Java Server Pages, se requiere un servidor web compatible 
+							con contenedores servlet como Apache Tomcat o Jetty.
+							</br>
+							La principal ventaja de JSP frente a otros lenguajes es que el lenguaje Java es un lenguaje de propósito general 
+							que excede el mundo web y que es apto para crear clases 
+							que manejen lógica de negocio y acceso a datos de una manera prolija.
+							Esto permite separar en niveles las aplicaciones web,
+							dejando la parte encargada de generar el documento HTML en el archivo JSP.
+							</br>
+							Las JSPs son en realidad una forma alternativa de crear servlets ya que el código JSP se traduce a código de servlet 
+							Java la primera vez que se le invoca y en adelante es el código del nuevo servlet el que se ejecuta produciendo como salida el código HTML 
+							que compone la página web de respuesta.
+						</p>
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Variables implícitas</h3>
+								<p align="justify">Las páginas JSP incluyen ciertas variables privilegiadas sin necesidad de declararlas ni configurarlas:
+								</p>
+								<div  align="center"><img width="400px" height="300px" src="../IMAGENES_GRUPO/GRUPO 1/JSP-DOC-1.png"></div>
+
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Directivas</h3>
+								<p align="justify">Son etiquetas a partir de las cuales se genera información que puede ser utilizada por el motor de JSP.
+									No producen una salida visible al usuario, sino que configura cómo se ejecutará la página JSP.</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Las directivas disponibles son:</h3>
+								<p align="justify">include: Incluye el contenido de un fichero en la página mediante el atributo file.
+									(<%@ include file="cabecera.html" %>)
+									taglib: Importa bibliotecas de etiquetas (Tag Libraries)
+									(<%@ taglib uri="/tags/struts-html" prefix="html" %>)
+									page: Especifica atributos relacionados con la página a procesar. Los atributos son:
+								</p>
+
+								<div align="center"><img width="400px" height="300px" src="../IMAGENES_GRUPO/GRUPO 1/JSP-DOC-2.png"></div>
+
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>¿Qué es una aplicación WEB?</h3>
+								<p align="justify">Es un sitio WEB cuyas páginas son generadas dinámicamente. 
+									(Esto que se generan dinámicamente quiere decir que dependiendo de la acción del usuario en esa página el servidor nos mandara unas páginas u otras). 
+									Dependiendo de la acción del usuario, se generan unas páginas u otras. 
+									<br>
+									(Como cuando damos click en buscar lo que hace es se envía una petición al servidor que procesa la información y 
+									el servidor consulta con una base de datos para obtener información, 
+									la base de datos envía los datos de vuelta al servidor que 
+									procesa la respuesta genera una página web dinámica y nos envía esta página web dinámica 
+									que ha construido en parte los datos que le proporcionó la base de datos) 
+									<br>
+									Es un código JAVA que se ejecuta en un servidor web no local
+									Lee las acciones del usuario casi siempre desde formularios HTML
+									Devuelve una página HTML que se genera de forma dinámica dependiendo de las acciones del usuario.
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Motor JSP</h3>
+								<p align="justify">El motor de las páginas JSP está basado en los servlets de Java,
+									programas en Java destinados a ejecutarse en el servidor 
+									<br>
+									En JSP creamos páginas de manera parecida a como se crean en ASP o PHP, otras dos tecnologías de servidor. 
+									Generamos archivos con extensión .jsp que  se incluyen dentro de la estructura de etiquetas HTML, 
+									las sentencias Java que se ejecutarán  en el servidor. Antes de que sean funcionales los archivos, 
+									el motor JSP lleva a cabo una fase de traducción de esa página en un servlet, 
+									implementado en un archivo class (Bytecodes de Java). Esta fase de traducción se lleva a cabo habitualmente cuando se recibe la primera solicitud de la página .
+									jsp, aunque existe la opción de pre-compilar en código para evitar ese tiempo de espera la primera vez que un cliente solicita la página. 
+								</p>
+								<div  align="center"><img width="400px" height="300px" src="../IMAGENES_GRUPO/GRUPO 1/JSP-DOC-3.png"></div>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>¿QUÉ ES UN SERVLET?</h3>
+								<p align="justify"> Los Servlets son tecnología que se ejecuta del lado del servidor y procesan todas las peticiones que hace un cliente, 
+									si figuramos el MVC (Modelo Vista Controlador), un servlet hace de controlador, esto quiere decir que recibe la petición desde el navegador,
+									si la petición es la búsqueda de un cliente (en una base de datos), el servlet delega al modelo a recuperar el cliente y lo envía (response) al navegador a través de una página JSP.</p>
+									
+							   <div  align="center"><img width="400px" height="300px" src="../IMAGENES_GRUPO/GRUPO 1/JSP-DOC-4.png"></div>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>¿QUÉ PUEDO HACER CON JSP Y SERVLET?</h3>
+								<p align="justify"> A través de una página JSP puedes crear un formulario que incluya datos como por ejemplo: nombres, 
+									apellidos y con ayuda de un servlet enviarlos a guardar en una base de datos,
+									puedes obtener información de una base de datos y mostrarle al usuario esos datos, 
+									como mínimo eso es lo que puedes hacer. 
+									En fin puedes crear desde algo sencillo hasta una gran aplicación web.
+								</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Ejemplo de Java server pages</h3>
+								<div align="center">
+									<iframe width="702" height="395" src="https://www.youtube.com/embed/gvwjmUy7Iw8" frameborder="0"
+		   							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		   							allowfullscreen></iframe>
+								</div>
+								
 							</div>
 						</div>
 					</div>
