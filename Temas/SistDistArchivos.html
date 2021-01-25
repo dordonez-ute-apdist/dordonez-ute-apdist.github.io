@@ -101,23 +101,116 @@
 				<section id="main" class="container">
 					<header>
 						<h2>SISTEMAS DISTRIBUIDOS DE ARCHIVOS</h2>
-						<p>A generic page for every non-generic situation.</p>
+						<!--<p>A generic page for every non-generic situation.</p>-->
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<h3>¿Qué es un Sistema de archivos distribuido?</h3>
+						<p align="justify">Un sistema de archivos distribuido o sistema de archivos de red es un sistema de archivos de computadoras que sirve para compartir archivos, impresoras y otros recursos como un almacenamiento persistente en una red de computadoras.
+							El primer sistema de este tipo fue desarrollado en la década de 1970, y en 1985 Sun Microsystems creó el sistema de archivos de red NFS el cual fue ampliamente utilizado como sistema de archivos distribuido.
+						</p>
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Propósito</h3>
+								<p align="justify">Es soportar la misma clase de comportamiento cuando los archivos están dispersos físicamente entre los diversos sitios de un sistema distribuido.</p>
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>COMPONENTES</h3>
 							</div>
 						</div>
 					</div>
+
+					<div class="box">
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+						<h3>El verdadero servicio de archivos:</h3>
+						<p align="justify">Realiza operaciones en los archivos individuales: lectura, escritura, adición.
+						</p>
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>El servicio de directorios:</h3>
+								<p>Lectura: La lectura consiste en transferir un archivo de uno de los servidores de archivos al cliente. </p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>CLASIFICACIÓN</h3>
+								<br>
+								<h3>Modelo carga/descarga:</h3>
+								
+								<h3>Operaciones:</h3>
+								<p align="justify">Lectura: La lectura consiste en transferir un archivo de uno de los servidores de archivos al cliente. </p>
+								<p align="justify">Escritura: consiste en una transferencia como la lectura, pero en sentido contrario. </p>
+
+								<br>
+								<h3>Modelo de acceso remoto:</h3>
+
+								<p align="justify">Los archivos son ejecutados con todas las funciones en los servidores y no en los clientes. </p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+
+						<h3>Modelo cliente-servidor</h3>
+						<p align="justify">Servicios del sistema de archivos. Operaciones proporcionadas a los clientes</p>
+						<p align="justify">Servidores del sistema de archivos. Procesos de usuario o del sistema que ofrecen los servicios correspondientes (servidores multithread)</p>
+
+						<div align="center"><img src="../IMAGENES_GRUPO/GRUPO 1/ArqSAD.png"
+							width="500"
+							height="300">
+						</div>
+
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>Transparencia</h3>
+								<p>Mismas operaciones para acceso locales y remotos.</p>
+								<p>Imagen única del sistema de archivos.</p>
+
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Rendimiento</h3>
+								<br>
+								<h3>Modelo carga/descarga:</h3>
+								<p align="justify">Un SAD tiene sobrecargas adicionales.</p>
+								<p align="justify">Red de comunicación, protocolos, posible necesidad de realizar más copias, etc.</p>
+								<br>
+
+								<h3>Facilidad de crecimiento</h3>
+								<p align="justify">Eliminar los cuellos de botella. </p>
+								<br> 
+
+								<h3>Tolerancia a fallos</h3>
+								<p align="justify">replicación, funcionamiento degrado. </p>
+
+								<div align="center"><img src="../IMAGENES_GRUPO/GRUPO 1/CompSAD.png"
+									width="500"
+									height="300">
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+						<h3>Modelo en Cluster</h3>
+						<p align="justify">En informática, el término clúster (“grupo” o “racimo”) hace referencia a
+							conjuntos o conglomerados de computadoras construidos mediante el uso
+							de hardware común y que se comportan como si fueran una única computadora.
+							El uso de los clústeres varía desde las aplicaciones de supercómputo, servidores web y comercio electrónico hasta el software de misiones críticas y bases de datos de alto
+							rendimiento.
+						</p>
+						<p align="justify">Microprocesadores de alto rendimiento. </p>
+						<p align="justify">Redes de alta velocidad. </p>
+						<p align="justify">Software para cómputo distribuido de alto rendimiento.</p>
+
+						<div align="center"><img src="../IMAGENES_GRUPO/GRUPO 1/ArqClu.png"
+							width="500"
+							height="300">
+						</div>
+
+					</div>
+
 				</section>
 
 			<!-- Footer -->
