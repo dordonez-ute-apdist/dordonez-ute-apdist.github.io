@@ -104,22 +104,92 @@
 						
 					</header>
 					<div class="box">
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<h3>ORM</h3>
+						<center><h3>ORM</h3></center>
 						<p> 
 							<strong>Que es:</strong>
 							Object-Relational mapping, o lo que es lo mismo, mapeo de objeto-relacional, es un modelo de programación que consiste en la transformación de las tablas de una base de datos, en una serie de entidades que simplifiquen las tareas básicas de acceso a los datos para el programador. 
 							Un ORM es un modelo de programación que permite mapear las estructuras de una base de datos relacional (SQL Server, Oracle, MySQL, etc.) , en adelante RDBMS (Relational Database Management System), sobre una estructura lógica de entidades con el objeto de simplificar y acelerar el desarrollo de nuestras aplicaciones.
 						</p>
+						<br>
 						<img src="../IMAGENES_GRUPO/GRUPO 4/ORM.jpg" width="700" height="300">
+
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Porque usar ORM:</h3>
+								<p>
+									Aunque el lenguaje SQL se usa para acceder a muchas de las bases de datos existentes, existen múltiples varianzas en las funciones que los distintos SGBD han usado. Un ejemplo muy sencillo sería delimitar el número de registros de una consulta:
+									<br>
+									<br>
+									<img src="../IMAGENES_GRUPO/GRUPO 4/ORM2.jpg" width="700" height="300">
+									<br>
+									<br>
+									Tres de las bases de datos más importantes, y como veis, para algo tan fácil vemos diferencias. Esto para el programador supone tener que conocer el lenguaje para cada Base de datos, y más importante aún, si en un futuro se desea migrar la aplicación, habría que reescribir gran número de las consultas.
+									<br>
+									<br>
+									Esto el ORM al tener un capa intermedia, abstrae al programador de la base de datos y le centra en el desarrollo de la aplicación. 
+									Otro punto importante es la facilidad de trabajo, un ORM, nos facilita las labores básicas de cualquier acceso a datos , el CRUD (Create, Read, Update y Delete). Realizando todas estas labores a través de un lenguaje de alto nivel orientado a objetos. Ahora que ya sabemos que es un ORM y porque usarlo, vamos a ver sus ventajas y desventajas.
+									<br>
+									<br>
+									<strong>Ventajas</strong>
+									<li>Facilidad y velocidad de uso</li>
+									<li>Abstraccion de la base de datos usada</li>
+									<li>Seguridad de la capa de acceso a datos contra ataques.</li>
+
+									<strong>Desventajas</strong>
+									<li>En entornos con gran carga poner una capa más en el proceso. puede mermar el rendimiento.</li>
+									<li>Aprender el nuevo lenguaje del ORM.</li>
+
+									<strong>ORM mas utilizadas</strong>
+									<li>Java => Hibernate, iBatis, Ebean, etc..</li>
+									<li>.NET=> Entity Framework, nHibernate, etc..</li>
+									<li>PHP=> Doctrine, Propel, ROcks, Torpor, etc..</li>
+
+								</p>
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<center><h3>JPA</h3></center>
+								<p>
+									<strong>Que es:</strong>
+									<br>
+									JPA es la propuesta estándar que ofrece Java para implementar un Framework Object Relational Mapping (ORM), que permite interactuar con la base de datos por medio de objetos, de esta forma, JPA es el encargado de convertir los objetos Java en instrucciones para el Manejador de Base de Datos (MDB). 
+									Una de las cosas más importantes para comprender que es JPA es entender que JPA es una especificación y no un Framework como tal, ¿pero quiere decir esto exactamente? , pues bien, una especificación no es más que un documento en el cual se plasman las reglas que debe de cumplir cualquier proveedor 
+									que dese desarrollar una implementación de JPA, de tal forma que cualquier persona puede tomar la especificación y desarrollar su propia implementación de JPA, ¿Esto quiere decir que pueden existir muchas implementaciones de JPA? la respuesta es sí, de echo en la actualidad existen varios proveedor 
+									como lo son los siguientes:
+									<br>
+									<br>
+									<li>Hibernate</li>
+									<li>ObjectDB</li>
+									<li>TopLink</li>
+									<li>EclipseLink</li>
+									<li>OpenJPA</li>
+									<br>
+									<br>
+									Dentro de las implementaciones más utilizadas están Hibernate, EclipseLink & TopLink, las dos primeras son las más utilizadas en el mundo open source y TopLink es muy utilizada en desarrollos y productos relacionados con Oracle. Antes de preguntarnos cuál es la diferencia entre todas estas implementaciones
+									tenemos que comprender que en teoría todas debería de ofrecer la misma funcionalidad y el mismo comportamiento, lo que nos permitiría migrar entre una implementación a otra sin afectar en nada nuestra aplicacion.
+									<br>
+									<br>
+									Desde luego esto es solo teoría, ya que en la actualidad no todas las implementaciones implementan al 100% la especificación de JPA, además en escenario muy concretos puede que se comporten ligeramente diferente, por lo que puede requerir realizar algunos ajustes antes de migrar correctamente de proveedor.
+									<br>
+									<br>
+									<strong>Entidades</strong>
+									<br>
+									<br>
+									Una entidad de persistencia (entity) es una clase de Java ligera, cuyo estado es persistido de manera asociada a una tabla en una base de datos relacional. Las instancias de estas entidades corresponden a un registro (conjunto de datos representados en una fila) en la tabla. Normalmente las entidades están 
+									relacionadas con otras entidades, y estas relaciones son expresadas a través de metadatos objeto/relacional. Los metadatos del objeto/relacional pueden ser especificados directamente en el fichero de la clase, usando las anotaciones de Java (annotations), o en un documento descriptivo XML, el cual es 
+									distribuido junto con la aplicación.
+									<br>
+									<br>
+									<strong>Relaciones entre entidades y ORM</strong>
+									<br>
+									<br>
+									En JPA también es posible definir relaciones entre entidades, similares a las relaciones entre tablas en el modelo relacional. Así, una entidad puede estar relacionada con una o muchas otras entidades, definiendo relaciones uno-a-uno, uno-a-muchos o muchos-a-muchos. Estas relaciones se definen en JPA por 
+									medio de variables de instancia de las entidades y de métodos getters y setters que las actualizan. Por ejemplo, una propiedad de una entidad Reserva será el Vuelo sobre el que se ha hecho la reserva. Las instancias de Reserva tendrán asociadas instancias de Vuelo a las que podremos acceder fácilmente 
+									con un método como getVuelo. De esta forma, podremos obtener la(s) instancia(s) asociadas con una instancia dada llamando a un método de la entidad, sin tener que realizar ninguna consulta SQL. Esta es una de las ventajas fundamentales de JPA: es posible hacer de forma programativa (llamando a métodos 
+									definidos en las entidades) lo que en el modelo relacional sólo se puede hacer mediante consultas SQL.
+									<br>
+									<br>
+									<img src="../IMAGENES_GRUPO/GRUPO 4/JPA.jpg" width="700" height="300">
+								</p>
 							</div>
 						</div>
 					</div>
