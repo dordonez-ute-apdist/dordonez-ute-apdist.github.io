@@ -109,12 +109,62 @@
 						<p>Es un programa que utiliza una computadora para ejecutar código en otra máquina remota sin tener que preocuparse por las comunicaciones entre ambas, el protocolo que se utiliza para esta llamada es un gran avance sobre los sockets de Internet usados hasta el momento.</p>
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>COMUNICACIÓN ENTRE PROCESOS</h3>
+								<ul>IPC: Inter-Process Communication
+                                    <li>Procesos comparten datos</li>
+                                    <li>Cliente-Servidor (Petición-Respuesta)</li>
+                                </ul>
+                                <ul>Multiples formas de compartir información
+                                    <li>Archivos</li>
+                                    <li>Sockets</li>
+                                    <li>Tuberias</li>
+                                    <li>Colas de mensajes</li>
+                                    <li>Memoria Compartida</li>
+                                    <li>Paso de mensajes</li>
+                                </ul>
+                                <ul>LLAMADA A PROCEDIMIENTO REMOTO
+                                    <ul>Procesos comparten información como en IPC
+                                        <li>Generalmente entre diferentes computadoras a través de una red</li>
+                                    </ul>
+                                </ul>
+
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h2>TIPOS DE SEMANTICA</h2>
+								<ul><h3>Semántica "tal-vez"</h3>
+                                    <li>Procedimiento remoto puede ejecutarse una vez o ninguna vez.</li>
+                                    <li>El cliente puede recibir una respuesta o ninguna.</li>
+                                    <ol>Funcionamiento
+                                    <li>El cliente envía una petición y se queda a la espera un tiempo determinado.</li>
+                                    <li>Si no llega la respuesta dentro del tiempo de espera, continúa su ejecución.</li>
+                                    <li>El cliente no tiene realimentación en caso de fallo (no sabe que pasó).</li>
+                                </ol>
+                                </ul>
+                                
+                                <ul><h3>Semántica "al-menos-una-vez</h3>
+                                    <li>Procedimiento remoto se ejecuta una o más veces.</li>
+                                    <li>El cliente puede recibir una o más respuestas.</li>
+                                    <ol>Funcionamiento
+                                    <li>El cliente envía una petición y queda a la espera un tiempo.</li>
+                                    <li>Si no llega respuesta o ACK dentro del tiempo de espera, repite la petición.</li>
+                                    <li>El servidor no filtra peticiones duplicadas (el procedimiento remoto puede ejecutarse repetidas veces).</li>
+                                    <li>El cliente puede recibir varias respuestas.</li>
+                                </ol>
+
+                                </ul>
+                                
+                                
+                                 <ul><h3>Semántica "como-máximo-una-vez"</h3>
+                                    <li>El procedimiento remoto se ejecuta exactamente una vez o no llega a ejecutarse ninguna.</li>
+                                    <li>El cliente recibe una respuesta o una indicación de que no se ha ejecutado el procedimiento remoto.</li>
+                                    <ol>Funcionamiento
+                                    <li>El cliente envía la petición y queda a la espera un tiempo.</li>
+                                    <li>Si no llega respuesta o ACK dentro del tiempo de espera, repite la petición.</li>
+                                    <li>El servidor filtra las peticiones duplicadas y guarda historial con las respuestas enviadas (servidor con memoria). El procedimiento remoto sólo se ejecuta una vez.</li>
+                                    <li>El cliente sólo recibe una respuesta si la petición llegó y se ejecutó el procedimiento, si no recibe informe del error.</li>
+                                </ol>
+
+                                </ul>
 							</div>
 						</div>
 					</div>
@@ -155,4 +205,5 @@
 			<script src="../assets/js/main.js"></script>
 
 	</body>
-</html>
+</html> 
+ 

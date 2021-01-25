@@ -101,20 +101,36 @@
 				<section id="main" class="container">
 					<header>
 						<h2>JAVA STREAM</h2>
-						<p>A generic page for every non-generic situation.</p>
+						
 					</header>
 					<div class="box">
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
 						<h3>Java Streams</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+						<p>Java Streams Las Java Streams son lo que técnicamente, en programación funcional, se llama mónadas, que puesto de manera simple, son un tipo de objeto que contiene una serie de datos y que puede ser combinado en un flujo de procesamiento tipo pipeline: los datos pasan por una serie de procesos que piden transformarlos en cada paso,
+							 emitiendo nuevos datos, hasta lograr un dato o serie de datos final.</p>
 						<div class="row">
 							<div class="row-6 row-12-mobilep">
-								<h3>And now a subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Un Stream, entonces, generalmente contiene una serie de elementos, que puede generarse, por ejemplo, a partir de una colección:</h3>
+								<li>Los Stream tienen operaciones intermedias, que devuelven una nueva Stream transformada, que se puede seguir encadenando, pero que solo se ejecutan cuando en el pipeline existe una operación terminal</li>
+								<li>Las Stream pueden ser seriales o paralelas. Aquellas seriales se procesaran en un solo hilo, y aquellas paralelas se procesaran en varios hilos, de manera automática, gracias al uso de ForkJoinPool del sistema.</li>
+								<br>
+								<br>
+								<img src="../IMAGENES_GRUPO/GRUPO 4/JavaStreams1.jpg" width="700" height="250">
+								<br>
 							</div>
 							<div class="row-6 row-12-mobilep">
-								<h3>And another subheading</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+								<h3>Operaciones Intermedias y Terminales:</h3>
+								<p>Las operaciones intermedias son aquellas que devuelven un Stream transformada y las terminales cierran el pipeline. </p>
+								<br>
+								<img src="../IMAGENES_GRUPO/GRUPO 4/JavaStreams1.jpg" width="700" height="250">
+								<br>
+								<h3>Nota:</h3>
+								<li>Filter(P) (Operación Intermedia)</li>
+								<li>Map(F) (Operación Intermedia)</li>
+								<li>ForEach(A) (Operación Terminal)</li>
+								<li>Sorted() (Operación Intermedia)</li>
+								<li>Reduce(I, O) (Operación Terminal)</li>
+								<li>Collect(C) (Operación Terminal)</li>
+								<br>
 							</div>
 						</div>
 					</div>
