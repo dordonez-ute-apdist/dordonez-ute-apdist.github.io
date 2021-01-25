@@ -119,14 +119,17 @@
             <p align="justify">Inversion of control (IoC) es una forma de trabajar que rompe con el formato tradicional, en donde el programar es el encargado de definir la secuencia de operaciones que se deben
                de realizar para llegar a un resultado. En este sentido el programador debe conocer todos los detalles del framework y las operaciones a realizar en él, por otra parte, el Framework no conoce 
                absolutamente nada de nuestro programa. Es decir, solo expone operaciones para ser ejecutada. La siguiente imagen muestra la forma de trabajo normal.
-            </p>
-            <img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime.png"  >
+			</p>
+			<div align="center">
+				<img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime.png"  >
+			</div>
+           
              <br><br> 
 
             <p align="justify">Veamos que nuestra aplicación es la que llama en todo momento al Framework y este hace lo que la App le solicita. Por otra parte, al Framework no le interesa en absoluto la App.
               Pero qué pasaría si invirtiéramos la forma de trabajo, y que en lugar de que la App llame funciones del Framework, sea el Framework el que ejecute operaciones sobre la App, ¿suena extraño no? 
               Pues en realidad a esta técnica es a la que se le conoce como Inversion of Control. Veamos en la siguiente imagen como es que funciona IoC:.</p>
-            <div><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime2.png" ></div>
+			  <div align="center"><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime2.png" ></div>
            <br><br>
            <p align="justify">Esta última imagen se ve bastante parecida a la anterior, sin embargo, tiene una gran diferencia, y es que las llamadas se invirtieron, 
             ahora es el Framework es el realiza operaciones sobre nuestra App.
@@ -134,7 +137,7 @@
             sobre nuestra App. La respuesta es simple pero complicada, y es que utilizar este IoC es mucho más simple de lo que parecería, pero implementar un Framework 
             de este tipo tiene un grado alto de complejidad, dicho de otra manera, si tú eres la App puedes implementar muy fácilmente al Framework, pero si tu estas desarrollando
             el Framework puede ser un verdadero dolor de cabeza.</p>
-            <div><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime3.png" ></div>
+			<div align="center"><img width="500" height="300" src="../IMAGENES_GRUPO/GRUPO 1/runtime3.png" ></div>
             <br><br>
             <p align="justify">Analicemos la imagen, primero el Framework analizará al App mediante los metadatos, este encontrará la clase EmployeeService que esta anotada con @Service,
             seguido le inyectará una instancia del TrasnactionManager mediante el método setTransactionManager que esta anotado con @Resource, finalmente el servicio será retornado a la App
@@ -142,13 +145,16 @@
             <br><br>
           </ul>
 
-					<div align="center">
+		   <div align="center">
             <h3>Ejemplo  Inversión de control</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/vFzP2SaMyA0" 
             frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
-          </div>
-					
+		  </div>
+		  
+		   <div align="center">
+			<li><a href="../Diapositivas/Inversion de Control.pptx" class="button">Descargar Presentacion</a></li>
+		   </div> 
 	    </section>
 
 			<!-- Footer -->
