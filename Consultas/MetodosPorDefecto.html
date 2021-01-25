@@ -105,57 +105,114 @@
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-						<p align="justify">MapReduce es un framework que proporciona un sistema de procesamiento de datos paralelo y distribuido. Su nombre se debe a las funciones principales que son Map y Reduce, las cuales explicaremos a continuación. MapReduce está pensado para la solución práctica de algunos problemas que pueden ser paralelizados, pero se ha de tener en cuenta que no todos los problemas pueden resolverse eficientemente con MapReduce. 
-							MapReduce está orientado a resolver problemas con conjuntos de datos de gran tamaño, por lo que utiliza el sistema de archivos distribuido HDFS.
+						<p align="justify"> 
 						</p>
+						  <p align="justify">Los métodos default de Java son métodos ya diseñados listos para cargar o ser llamados por otros métodos , estos sólo se permiten introducir en interfaces, por lo tanto no existen en clases. 
+                                                             Estos métodos, al igual que todos los demás en las interfaces, son de manera implícita públicos. Su principal diferencia es que no son abstractos como el resto y necesitan proporcionar una 
+						             implementación para pasar la fase de compilación.
+
+						  	     </p>
+					  
+					  <h2><strong></strong>Los siguientes puntos son obligatorios para crear un método default en el lenguaje Java:</h2>
+                      <p align="left" style="font-size: 115%">
+						 <ul>
+							  <li align="left">&nbsp&nbsp&nbsp&nbsp Comenzará por la palabra reservada default.</li>
+							  <li align="left">&nbsp&nbsp&nbsp&nbspProporcionará una implementación al método.</li>
+							  <li align="left">&nbsp&nbsp&nbsp&nbspDebe de encontrarse dentro de una interfaz.</li>
+							  
+              </ul>
+		  
+              <br>
+		  
+		  <h2><strong>¿Qué nos permite un método default en Java?</strong></h2>	<br>
+					  <p align="justify">Lo que nos permite es de manera flexible modificar el patrón de abstracción que hasta ahora las interfaces
+						  proporcionaban. Podremos modificar el contrato de la interfaz y automáticamente propagarlo a todas las clases que la 
+						  implementan sin tener que editarlas todas (que se hubieran roto al no contemplar el nuevo método añadido). 
+						  Ahora el ejemplo.
+</p>
+		  
 						
-						<div class="row">
-							<div class="row-6 row-12-mobilep">
-								<h3>JobTracker: Servidor maestro de MapReduce</h3>
-								<ul>
-									<li align="left">&nbsp&nbsp&nbsp&nbsp Capacidad para manejar metadatos de trabajos</li>
-									<li align="left">&nbsp&nbsp&nbsp&nbspDecide sobre la programació </li>
-									<li align="left">&nbsp&nbsp&nbsp&nbspHay exactamente un JobTracker por cluster.</li>
-									<li align="left">&nbsp&nbsp&nbsp&nbspRecibe peticiones de tareas enviadas por el cliente.</li>
-									<li align="left">&nbsp&nbsp&nbsp&nbspPrograma y monitoriza los trabajos MapReduce con TaskTrackers.</li>
-								<ul>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>TaskTracker: Servidor esclavo de MapReduce</h3>
-								<ul>
-									<li align="left">&nbsp&nbsp&nbsp&nbspEjecuta las solicitudes de trabajo de JobTrackers</li>
-							 		<li align="left">&nbsp&nbsp&nbsp&nbspObtiene el código que se ejecutará </li>
-							  		<li align="left">&nbsp&nbsp&nbsp&nbspAplica la configuración especifica del trabajo</li>
-							 		<li align="left">&nbsp&nbsp&nbsp&nbspComunicación con el JobTracker: Envíos de la salida, finalizar tareas, actualización de tareas, etc.</li>
-								</ul>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>Funcion Reduce</h3>
-								<p align="justify">La función Reduce se aplica en paralelo para cada grupo creado por la función Map().La función Reduce se llama una vez para cada clave única de la salida de la función Map. Junto con esta clave, se pasa una lista de todos los valores asociados con la clave para que pueda realizar alguna fusión para producir un conjunto más pequeño de los valores.
-									Reduce (clave2, lista(valor2)) –> lista(valor2)
-								   Cuando se inicia la tarea reduce, la entrada se encuentra dispersa en varios archivos a través de los nodos en las tareas de Map. Los datos obtenidos de la fase Map se ordenan para que los pares clave-valor sean contiguos (fase de ordenación, sort fase), esto hace que la operación Reduce se simplifique ya que el archivo se lee secuencialmente.	 
-								</p>
-								<div><img width="500px" height="300px" src="../IMAGENES_GRUPO/GRUPO 1/FuncionReduce.png" align="center" ></div>
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>Funcion Map</h3>
-								<p align="justify"> La función Map recibe como parámetros un par de (clave, valor) y devuelve una lista de pares. Esta función se encarga del mapeo y se aplica a cada elemento de la entrada de datos, por lo que se obtendrá una lista de pares por cada llamada a la función Map. Después se agrupan todos los pares con la misma clave de todas las listas, creando un grupo por cada una de las diferentes claves generadas. No hay requisito de que el tipo de datos para la entrada coincida con la salida y no es necesario que las claves de salida sean únicas.</p>
-
-          						<p align="center">Map (clave1, valor1) –> lista (clave2, valor2)</p> 
-            
-            					<p>La operación de Map se paraleliza, el conjunto de archivos de entrada se divide en varias tareas llamado FileSplit, el tamaño típico de bloque es de 128MB. Las tareas se distribuyen a los nodos TaskTrackers, y estos a su vez pueden realizar la misma tarea si hiciera falta.</p>	 </br> 
-               					<img width="450px" height="400px" src="../IMAGENES_GRUPO/GRUPO 1/FuncionMap.png" align="center" ><p align="justify"> La función Map recibe como parámetros un par de (clave, valor) y devuelve una lista de pares. Esta función se encarga del mapeo y se aplica a cada elemento de la entrada de datos, por lo que se obtendrá una lista de pares por cada llamada a la función Map. Después se agrupan todos los pares con la misma clave de todas las listas, creando un grupo por cada una de las diferentes claves generadas. No hay requisito de que el tipo de datos para la entrada coincida con la salida y no es necesario que las claves de salida sean únicas.</p>
-
-			  					<p align="center">Map (clave1, valor1) –> lista (clave2, valor2)</p> 
+					 	 </ul>
+					  </p>	
+						
 				
-								<p>La operación de Map se paraleliza, el conjunto de archivos de entrada se divide en varias tareas llamado FileSplit, el tamaño típico de bloque es de 128MB. Las tareas se distribuyen a los nodos TaskTrackers, y estos a su vez pueden realizar la misma tarea si hiciera falta.</p>	 </br> 
-				   				<img width="450px" height="400px" src="../IMAGENES_GRUPO/GRUPO 1/FuncionMap.png" align="center" >
-							</div>
-							<div class="row-6 row-12-mobilep">
-								<h3>Ejemplo de MapReduce</h3>
-								<iframe width="500" height="400" src="https://www.youtube.com/embed/cW8racyXuvY" frameborder="0" allow="accelerometer; 
-            					autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
+				<!--separador negro-->
+				
+      <strong><h1>&nbsp</h1></strong>	
+      	
+
+                         <!--fin separador negro-->
+						
+
+    	
+			<!-- Seccion fin izquierda texto -->
+		
+              <!-- Seccion derecha texto -->
+
+
+			 <p align="justify">Si en la actualidad tuviéramos una interfaz implementada por 20 clases en nuestra aplicación y necesitamos añadir 
+				 un nuevo método a esa interfaz para que nuestro diseño siga siendo rígido, tendríamos que modificar la interfaz y posteriormente 
+				 modificar todas las clases que la implementan.
+	 
+            </p>	 </br> 
+            <div><img width="50px" height="400px" src="../../../Contenido/Grupo 3/IMAGENES/metodo1.png" align="center" ></div>
+
+
+          </br> </br> </br>
+
+
+          <p align="justify">  Cómo vemos, Lavadora es una de nuestras 20 clases y tiene el método vender que la interfaz Vendible le está obligando a implementar. 
+		  Todo correcto hasta ahora. Pero llega el día en el que nos obligan a asegurar todos los productos que vendemos en nuestra aplicación. 
+		  Por lo tanto todos nuestros productos vendibles son asegurables. Haremos un pequeño cambio a nuestra interfaz: </p>
+
+
+           <p align="center"></p> 
+            </br> 
+               <img width="450px" height="400px" src="../../../Contenido/Grupo 3/IMAGENES/metodo2.png" align="center" >
+   
+             </br> </br> </br>  
+
+          <p align="justify"> Ahora, todos nuestros objetos vendibles implícitamente habrán heredado el método asegurar con la misma implementación. 
+             Podemos ir más lejos todavía, resulta que vendemos animales, al ser productos vivos tendremos que proporcionar una implementación distinta 
+             a la hora de asegurarlo, vaya faena. En este caso, modificaremos nuestra case «Animal» de la siguiente manera:
+ </p>
+
+
+           <p align="center"></p> 
+            </br> 
+               <img width="450px" height="400px" src="../../../Contenido/Grupo 3/IMAGENES/metodo3.png" align="center" >
+   
+             </br> </br> </br>  
+
+ <p align="justify">En este caso nos hemos visto obligados a modificar una clase que implementa nuestra interfaz, pero mantenemos los cambios en todas las 
+	 demás sin variaciones. Todas las clases que ahora heredan de Animal tendrán la implementación de asegurar() correcta.
+</p> 
+</br> 
+       <p align="left" style="font-size: 115%">
+	<ul>
+	<p align="justify">Si no implementamos un método default en nuestra clase. </p>
+	<li align="left">&nbsp&nbsp&nbsp&nbspLa clase Java automáticamente heredará ese método.</li>
+               </br>
+        <p align="justify">Mi interfaz extiende de una interfaz con método default</p>
+		 </br>
+        <p align="justify"> En este caso, existe 3 posibles opciones que puedes seguir con estos métodos default de java:</p>
+                </br>
+        <li align="left">&nbsp&nbsp&nbsp&nbspLa interfaz hija heredará el método default automáticamente.</li>
+        <li align="left">&nbsp&nbsp&nbsp&nbsp Redeclaras el método en la interfaz hija y lo conviertes en abstracto (deja de ser un método default).</li>
+        <li align="left">&nbsp&nbsp&nbsp&nbsp Redefines el método con una implementación distinta.</li>
+</ul>
+
+             </br> </br>  
+
+
+					<div align="center">
+            <h1>Ejemplo de MÉTODOS DEFAULT</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ixn8Ypri90w" frameborder="0" allow="accelerometer; 
+	     autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                                                      </div>
+
 						</div>
 					</div>
 				</section>
